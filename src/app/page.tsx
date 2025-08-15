@@ -74,7 +74,7 @@ export default function LandingPage() {
         <section id="team" className="py-20 bg-muted/40">
           <div className="container mx-auto max-w-6xl space-y-12 text-center">
             <h2 className="text-center text-3xl font-bold">Meet Our Team</h2>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
               <Card>
                 <CardContent className="flex flex-col items-center gap-6 p-6">
                   <Avatar className="h-40 w-40">
@@ -132,6 +132,18 @@ export default function LandingPage() {
                   <div className="text-center space-y-3">
                     <h3 className="text-2xl font-bold">Rupok</h3>
                     <p className="font-semibold text-primary">CMO</p>
+                  </div>
+                </CardContent>
+              </Card>
+               <Card>
+                <CardContent className="flex flex-col items-center gap-6 p-6">
+                  <Avatar className="h-40 w-40">
+                    <AvatarImage src="https://i.postimg.cc/rFXghYQy/IMG-20250815-233546-893.jpg" alt="Homo sapiens" data-ai-hint="person" />
+                    <AvatarFallback>HS</AvatarFallback>
+                  </Avatar>
+                  <div className="text-center space-y-3">
+                    <h3 className="text-2xl font-bold">Homo sapiens</h3>
+                    <p className="font-semibold text-primary">Host</p>
                   </div>
                 </CardContent>
               </Card>
