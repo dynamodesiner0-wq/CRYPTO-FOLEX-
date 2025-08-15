@@ -28,9 +28,6 @@ export default function ServicesPage() {
               <Button variant="ghost" asChild>
                 <Link href="/services">Services</Link>
               </Button>
-              <Button variant="ghost" asChild>
-                <Link href="/pricing">Pricing</Link>
-              </Button>
               <Button variant="ghost">Contact</Button>
             </nav>
           </div>
