@@ -44,6 +44,12 @@ function LandingPageContent() {
     { href: "https://www.binance.com/en/live/u/72409192", label: "Binance Live", icon: <Briefcase size={20} /> },
     { href: "https://x.com/Folex00", label: "X", icon: <Twitter size={20} /> },
   ];
+  
+  const communityImages = [
+    "https://i.postimg.cc/fbLKPVpD/IMG-20250816-003019-105.jpg",
+    "https://i.postimg.cc/RZGdG7Pg/IMG-20250816-003038.jpg",
+    "https://i.postimg.cc/W1sSMW7D/IMG-20250816-003057.jpg",
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
@@ -394,22 +400,26 @@ function LandingPageContent() {
             <p className="text-center text-muted-foreground mt-2 mb-10">
               Join our vibrant community of crypto enthusiasts.
             </p>
-            <div className="flex justify-center">
-              <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
-                <div className="w-[140px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
-                <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
-                <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
-                <div className="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
-                <div className="rounded-[2rem] overflow-hidden w-full h-full bg-background">
-                    <Image
-                      src="https://i.postimg.cc/fbLKPVpD/IMG-20250816-003019-105.jpg"
-                      alt="Community Screenshot"
-                      layout="fill"
-                      objectFit="cover"
-                      className="w-full h-full"
-                    />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {communityImages.map((src, index) => (
+                <div key={index} className="flex justify-center">
+                  <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
+                    <div className="w-[140px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+                    <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+                    <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+                    <div className="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+                    <div className="rounded-[2rem] overflow-hidden w-full h-full bg-background relative">
+                        <Image
+                          src={src}
+                          alt={`Community Screenshot ${index + 1}`}
+                          layout="fill"
+                          objectFit="cover"
+                          className="w-full h-full"
+                        />
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -493,5 +503,3 @@ export default function Page() {
 
   return isClient ? <LandingPageContent /> : null;
 }
-
-    
