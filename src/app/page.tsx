@@ -11,6 +11,18 @@ import { Twitter, Facebook, Linkedin, Instagram, Youtube, Check, Star, Send, Bad
 import Image from "next/image";
 
 export default function LandingPage() {
+  const amaBanners = [
+    { src: "https://i.postimg.cc/zfNt227Y/IMG-20250815-230700-438.jpg", alt: "AMA Banner 1" },
+    { src: "https://i.postimg.cc/8CwHKpsL/IMG-20250815-230653-749.jpg", alt: "AMA Banner 2" },
+    { src: "https://i.postimg.cc/B66CRr1k/IMG-20250815-230655-423.jpg", alt: "AMA Banner 3" },
+    { src: "https://i.postimg.cc/tg9kNZRX/IMG-20250815-230656-846.jpg", alt: "AMA Banner 4" },
+    { src: "https://i.postimg.cc/vZrXnLsq/IMG-20250815-230658-412.jpg", alt: "AMA Banner 5" },
+    { src: "https://i.postimg.cc/MKj96Jr8/IMG-20250815-230701-181.jpg", alt: "AMA Banner 6" },
+    { src: "https://i.postimg.cc/L8KNhQrg/IMG-20250815-230702-512.jpg", alt: "AMA Banner 7" },
+    { src: "https://i.postimg.cc/y6GfC8jP/IMG-20250815-230704-161.jpg", alt: "AMA Banner 8" },
+    { src: "https://i.postimg.cc/QCvSQfCP/IMG-20250815-230705-599.jpg", alt: "AMA Banner 9" },
+  ];
+
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -25,6 +37,7 @@ export default function LandingPage() {
             <Link href="#services" className="transition-colors hover:text-foreground/80">Services</Link>
             <Link href="#testimonials" className="transition-colors hover:text-foreground/80">Testimonials</Link>
             <Link href="#team" className="transition-colors hover:text-foreground/80">Team</Link>
+            <Link href="#ama-banners" className="transition-colors hover:text-foreground/80">AMA Banners</Link>
             <Link href="#contact" className="transition-colors hover:text-foreground/80">Contact</Link>
           </nav>
           <div className="flex flex-1 items-center justify-end gap-2">
@@ -211,7 +224,28 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="contact" className="py-20">
+        <section id="ama-banners" className="py-20">
+          <div className="container">
+            <h2 className="text-center text-3xl font-bold">PREVIOUS AMA BANNERS</h2>
+            <p className="text-center text-muted-foreground mt-2 mb-10">Check out some of our previous AMA banners.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              {amaBanners.map((banner, index) => (
+                <div key={index} className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                  <Image
+                    src={banner.src}
+                    alt={banner.alt}
+                    width={600}
+                    height={600}
+                    className="w-full h-auto object-cover"
+                    data-ai-hint="banner"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        
+        <section id="contact" className="py-20 bg-muted/40">
           <div className="container">
             <div className="grid gap-10 md:grid-cols-2">
               <div>
@@ -259,3 +293,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
