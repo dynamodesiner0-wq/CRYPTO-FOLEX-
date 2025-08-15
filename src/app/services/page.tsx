@@ -3,10 +3,11 @@
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
-import { Users, FileText, MessagesSquare } from "lucide-react";
+import { Users, FileText, MessagesSquare, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function ServicesPage() {
   return (
@@ -23,9 +24,6 @@ export default function ServicesPage() {
             <nav className="flex items-center">
               <Button variant="ghost" asChild>
                 <Link href="/">Home</Link>
-              </Button>
-              <Button variant="ghost" asChild>
-                <Link href="/about">About</Link>
               </Button>
               <Button variant="ghost" asChild>
                 <Link href="/services">Services</Link>
@@ -85,6 +83,40 @@ export default function ServicesPage() {
                 </p>
               </CardContent>
             </Card>
+          </div>
+        </section>
+        <section className="container py-10 md:py-16">
+          <div className="mx-auto max-w-3xl space-y-8">
+            <div className="text-center">
+                <h1 className="text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl">
+                    5 Years of Experience
+                </h1>
+            </div>
+            
+            <p className="text-center text-lg text-muted-foreground">
+                "In the ever-changing world of cryptocurrency, success requires
+                adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just
+                shaping the future – we're writing the playbook."
+            </p>
+            
+            <div className="flex justify-center">
+                <Card className="max-w-md">
+                    <CardContent className="flex items-center gap-4 p-6">
+                        <Avatar className="h-20 w-20">
+                            <AvatarImage src="https://placehold.co/100x100.png" alt="Son Heroic" data-ai-hint="person silhouette" />
+                            <AvatarFallback>SH</AvatarFallback>
+                        </Avatar>
+                        <div>
+                            <h3 className="text-xl font-bold">Son Heroic</h3>
+                            <p className="text-muted-foreground">Founder of (CRYPTO FOLEX Agency)</p>
+                            <div className="flex items-center gap-1 mt-1">
+                                <Star className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+                                <span className="font-semibold">5 star</span>
+                            </div>
+                        </div>
+                    </CardContent>
+                </Card>
+            </div>
           </div>
         </section>
       </main>
