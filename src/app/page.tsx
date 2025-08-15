@@ -59,63 +59,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="services" className="py-20 bg-muted/40">
-          <div className="container">
-            <h2 className="text-center text-3xl font-bold">Our Services</h2>
-            <p className="text-center text-muted-foreground mt-2 mb-10">We offer a wide range of services to help you grow your business.</p>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Social Media Growth</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">We help you grow your social media presence and engage with your audience.</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Content Creation</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">We create high-quality content that resonates with your audience and drives results.</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Community Management</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">We build and manage a strong community around your brand.</p>
-                </CardContent>
-              </Card>
-                 <Card>
-                <CardHeader>
-                  <CardTitle>KOL & Influencer Marketing</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Connect with key opinion leaders and influencers to amplify your brand's reach.</p>
-                </CardContent>
-              </Card>
-                 <Card>
-                <CardHeader>
-                  <CardTitle>PR & Media Outreach</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Secure media coverage and build relationships with journalists and publications.</p>
-                </CardContent>
-              </Card>
-                 <Card>
-                <CardHeader>
-                  <CardTitle>Crypto Marketing</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Specialized marketing strategies tailored for the unique crypto landscape.</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-        
         <section id="testimonials" className="py-20">
           <div className="container">
              <h2 className="text-center text-3xl font-bold">What Our Clients Say</h2>
@@ -237,6 +180,63 @@ export default function LandingPage() {
           </div>
         </section>
 
+        <section id="services" className="py-20 bg-muted/40">
+          <div className="container">
+            <h2 className="text-center text-3xl font-bold">Our Services</h2>
+            <p className="text-center text-muted-foreground mt-2 mb-10">We offer a wide range of services to help you grow your business.</p>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Social Media Growth</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">We help you grow your social media presence and engage with your audience.</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Content Creation</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">We create high-quality content that resonates with your audience and drives results.</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Community Management</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">We build and manage a strong community around your brand.</p>
+                </CardContent>
+              </Card>
+                 <Card>
+                <CardHeader>
+                  <CardTitle>KOL & Influencer Marketing</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Connect with key opinion leaders and influencers to amplify your brand's reach.</p>
+                </CardContent>
+              </Card>
+                 <Card>
+                <CardHeader>
+                  <CardTitle>PR & Media Outreach</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Secure media coverage and build relationships with journalists and publications.</p>
+                </CardContent>
+              </Card>
+                 <Card>
+                <CardHeader>
+                  <CardTitle>Crypto Marketing</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Specialized marketing strategies tailored for the unique crypto landscape.</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         <section id="ama-banners" className="py-20">
           <div className="container">
             <h2 className="text-center text-3xl font-bold">PREVIOUS AMA BANNERS</h2>
@@ -306,5 +306,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
