@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Twitter, Check, Star, Send, Briefcase, Menu } from "lucide-react";
+import { Twitter, Check, Star, Send, Briefcase, Menu, Users, RadioTower } from "lucide-react";
 import Image from "next/image";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 
@@ -33,6 +33,7 @@ function LandingPageContent() {
     { href: "#team", label: "Team" },
     { href: "#testimonials", label: "Testimonials" },
     { href: "#ama-banners", label: "AMA Banners" },
+    { href: "#community", label: "Community" },
     { href: "#partners", label: "Our Partners" },
     { href: "#contact", label: "Contact" },
   ];
@@ -383,6 +384,78 @@ function LandingPageContent() {
                   />
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="community" className="py-20 bg-muted/40">
+          <div className="container">
+            <h2 className="text-center text-3xl font-bold">OUR COMMUNITY</h2>
+            <p className="text-center text-muted-foreground mt-2 mb-10">
+              Join our vibrant community of crypto enthusiasts.
+            </p>
+            <div className="flex justify-center">
+              <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
+                <div className="w-[140px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+                <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+                <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+                <div className="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+                <div className="rounded-[2rem] overflow-hidden w-full h-full bg-background">
+                  <div className="flex flex-col h-full">
+                    <div className="bg-primary/10 p-4 flex items-center gap-4 border-b">
+                      <Avatar>
+                         <AvatarImage src="https://i.postimg.cc/Nj9QDFMr/IMG-20250815-212508-948.jpg" alt="Community Logo" />
+                         <AvatarFallback>CF</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <h3 className="font-bold">CRYPTO FOLEX</h3>
+                        <p className="text-xs text-muted-foreground">Public Group</p>
+                      </div>
+                    </div>
+                    <div className="p-4 bg-primary/5 text-sm border-b flex justify-around">
+                        <div className="text-center">
+                            <p className="font-bold text-lg">197K</p>
+                            <p className="text-xs text-muted-foreground">Members</p>
+                        </div>
+                         <div className="text-center">
+                            <p className="font-bold text-lg">1.2K</p>
+                            <p className="text-xs text-muted-foreground">Online</p>
+                        </div>
+                    </div>
+                    <div className="flex-1 p-4 space-y-4 overflow-y-auto">
+                      <div className="flex items-start gap-2.5">
+                        <Avatar className="w-8 h-8">
+                            <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo" />
+                            <AvatarFallback>MC</AvatarFallback>
+                        </Avatar>
+                        <div className="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+                            <div className="flex items-center space-x-2 rtl:space-x-reverse">
+                                <span className="text-sm font-semibold text-gray-900 dark:text-white">Mark Crimo</span>
+                            </div>
+                            <p className="text-sm font-normal py-2.5 text-gray-900 dark:text-white">New AMA announcement soon! 🔥</p>
+                        </div>
+                      </div>
+                       <div className="flex items-start gap-2.5">
+                        <Avatar className="w-8 h-8">
+                            <AvatarImage src="https://i.postimg.cc/26b01p8v/IMG-20250815-231059-726.jpg" alt="Mikey Marco" />
+                            <AvatarFallback>MM</AvatarFallback>
+                        </Avatar>
+                        <div className="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+                            <div className="flex items-center space-x-2 rtl:space-x-reverse">
+                                <span className="text-sm font-semibold text-gray-900 dark:text-white">Mikey Marco</span>
+                            </div>
+                            <p className="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Welcome to all new members!</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-4 mt-auto border-t">
+                      <Link href="https://t.me/cryptofolex" target="_blank" rel="noopener noreferrer">
+                         <Button className="w-full">Join Group</Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
