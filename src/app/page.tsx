@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Twitter, Facebook, Linkedin, Instagram, Youtube, Check, Star, Send, Badge } from "lucide-react";
+import { Twitter, Check, Star, Send, Badge, Briefcase } from "lucide-react";
 import Image from "next/image";
 
 export default function LandingPage() {
@@ -372,18 +372,30 @@ export default function LandingPage() {
       </main>
       <footer className="bg-primary/5 py-8">
         <div className="container text-center text-muted-foreground">
-            <div className="flex justify-center gap-4 mb-4">
-              <Link href="#" className="hover:text-foreground"><Twitter size={20} /></Link>
-              <Link href="#" className="hover:text-foreground"><Facebook size={20} /></Link>
-              <Link href="#" className="hover:text-foreground"><Linkedin size={20} /></Link>
-              <Link href="#" className="hover:text-foreground"><Instagram size={20} /></Link>
-              <Link href="#" className="hover:text-foreground"><Youtube size={20} /></Link>
-            </div>
+          <div className="mb-4">
+            <p className="text-lg font-semibold">Our all socials :⬇️💖</p>
+          </div>
+          <div className="flex justify-center gap-4 mb-4">
+            <Link href="https://t.me/cryptofolex" target="_blank" rel="noopener noreferrer" className="hover:text-foreground flex items-center gap-2">
+              <Send size={20} /> 
+              <span>Telegram Group</span>
+            </Link>
+            <Link href="https://t.me/Cryptofolex1" target="_blank" rel="noopener noreferrer" className="hover:text-foreground flex items-center gap-2">
+              <Send size={20} />
+              <span>Telegram Channel</span>
+            </Link>
+            <Link href="https://www.binance.com/en/live/u/72409192" target="_blank" rel="noopener noreferrer" className="hover:text-foreground flex items-center gap-2">
+              <Briefcase size={20} />
+              <span>Binance Live</span>
+            </Link>
+            <Link href="https://x.com/Folex00" target="_blank" rel="noopener noreferrer" className="hover:text-foreground flex items-center gap-2">
+              <Twitter size={20} />
+              <span>X</span>
+            </Link>
+          </div>
           <p>&copy; {new Date().getFullYear()} CRYPTO FOLEX. All rights reserved.</p>
         </div>
       </footer>
     </div>
   );
 }
-
-    
