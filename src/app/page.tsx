@@ -36,8 +36,8 @@ export default function LandingPage() {
           </div>
           <nav className="hidden items-center gap-4 text-sm font-medium md:flex">
             <Link href="#services" className="transition-colors hover:text-foreground/80">Services</Link>
-            <Link href="#testimonials" className="transition-colors hover:text-foreground/80">Testimonials</Link>
             <Link href="#team" className="transition-colors hover:text-foreground/80">Team</Link>
+            <Link href="#testimonials" className="transition-colors hover:text-foreground/80">Testimonials</Link>
             <Link href="#ama-banners" className="transition-colors hover:text-foreground/80">AMA Banners</Link>
             <Link href="#contact" className="transition-colors hover:text-foreground/80">Contact</Link>
           </nav>
@@ -71,139 +71,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="team" className="py-20 bg-muted/40">
-          <div className="container mx-auto max-w-6xl space-y-12 text-center">
-            <h2 className="text-center text-3xl font-bold">Meet Our Team</h2>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
-              <Card>
-                <CardContent className="flex flex-col items-center gap-6 p-6">
-                  <Avatar className="h-40 w-40">
-                    <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo" data-ai-hint="person" />
-                    <AvatarFallback>MC</AvatarFallback>
-                  </Avatar>
-                  <div className="text-center space-y-3">
-                    <h3 className="text-2xl font-bold">Mark Crimo</h3>
-                    <p className="font-semibold text-primary">The Founder</p>
-                    <div className="inline-block bg-primary/10 text-primary font-bold py-1 px-3 rounded-full">
-                      5 Years of Experience
-                    </div>
-                    <blockquote className="text-muted-foreground italic border-l-4 border-primary/50 pl-4 py-2 text-left">
-                      "In the ever-changing world of cryptocurrency, success requires adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just shaping the future - we're writing the playbook."
-                    </blockquote>
-                    <Link href="https://t.me/Markcrimo6" target="_blank" rel="noopener noreferrer">
-                      <Button>
-                        <Send className="mr-2 h-4 w-4" />
-                        Contact on Telegram
-                      </Button>
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="flex flex-col items-center gap-6 p-6">
-                  <Avatar className="h-40 w-40">
-                    <AvatarImage src="https://i.postimg.cc/26b01p8v/IMG-20250815-231059-726.jpg" alt="Mikey Marco" data-ai-hint="person" />
-                    <AvatarFallback>MM</AvatarFallback>
-                  </Avatar>
-                  <div className="text-center space-y-3">
-                    <h3 className="text-2xl font-bold">Mikey Marco</h3>
-                    <p className="font-semibold text-primary">Co_Founder</p>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="flex flex-col items-center gap-6 p-6">
-                  <Avatar className="h-40 w-40">
-                    <AvatarImage src="https://i.postimg.cc/zBKfDBWg/IMG-20250815-230231-790.jpg" alt="Chris Hendrikso" data-ai-hint="person" />
-                    <AvatarFallback>CH</AvatarFallback>
-                  </Avatar>
-                  <div className="text-center space-y-3">
-                    <h3 className="text-2xl font-bold">Chris Hendrikso</h3>
-                    <p className="font-semibold text-primary">Marketing Manager</p>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="flex flex-col items-center gap-6 p-6">
-                  <Avatar className="h-40 w-40">
-                    <AvatarImage src="https://i.postimg.cc/bYb92987/IMG-20250815-233551-808.jpg" alt="Rupok" data-ai-hint="person" />
-                    <AvatarFallback>R</AvatarFallback>
-                  </Avatar>
-                  <div className="text-center space-y-3">
-                    <h3 className="text-2xl font-bold">Rupok</h3>
-                    <p className="font-semibold text-primary">CMO</p>
-                  </div>
-                </CardContent>
-              </Card>
-               <Card>
-                <CardContent className="flex flex-col items-center gap-6 p-6">
-                  <Avatar className="h-40 w-40">
-                    <AvatarImage src="https://i.postimg.cc/rFXghYQy/IMG-20250815-233546-893.jpg" alt="Homo sapiens" data-ai-hint="person" />
-                    <AvatarFallback>HS</AvatarFallback>
-                  </Avatar>
-                  <div className="text-center space-y-3">
-                    <h3 className="text-2xl font-bold">Homo sapiens</h3>
-                    <p className="font-semibold text-primary">Host</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        <section id="testimonials" className="py-20">
-          <div className="container">
-             <h2 className="text-center text-3xl font-bold">What Our Clients Say</h2>
-             <p className="text-center text-muted-foreground mt-2 mb-10">Real stories from our satisfied partners.</p>
-            <div className="grid gap-8 md:grid-cols-2">
-              <Card>
-                <CardContent className="pt-6">
-                  <div className="flex items-center gap-4">
-                    <Avatar>
-                      <AvatarImage src="https://placehold.co/100x100.png" alt="Client 1" data-ai-hint="person"/>
-                      <AvatarFallback>C1</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <h3 className="font-bold">Alex Johnson</h3>
-                      <p className="text-sm text-muted-foreground">CEO, NFT Project</p>
-                    </div>
-                     <div className="ml-auto flex items-center gap-1">
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                     </div>
-                  </div>
-                  <p className="mt-4 text-muted-foreground">"CRYPTO FOLEX transformed our community engagement. Their strategies are top-notch and delivered measurable results."</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="pt-6">
-                  <div className="flex items-center gap-4">
-                    <Avatar>
-                      <AvatarImage src="https://placehold.co/100x100.png" alt="Client 2" data-ai-hint="person"/>
-                      <AvatarFallback>C2</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <h3 className="font-bold">Samantha Lee</h3>
-                      <p className="text-sm text-muted-foreground">Founder, DeFi Protocol</p>
-                    </div>
-                    <div className="ml-auto flex items-center gap-1">
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                     </div>
-                  </div>
-                  <p className="mt-4 text-muted-foreground">"The best in the business for crypto marketing. Their team is knowledgeable, responsive, and dedicated to our success."</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-        
         <section id="services" className="py-20 bg-muted/40">
           <div className="container">
             <h2 className="text-center text-3xl font-bold">Our Services</h2>
@@ -260,6 +127,142 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+        
+        <section id="team" className="py-20">
+          <div className="container mx-auto max-w-6xl space-y-12 text-center">
+            <h2 className="text-center text-3xl font-bold">Meet Our Team</h2>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
+              <Card>
+                <CardContent className="flex flex-col items-center gap-6 p-6">
+                  <Avatar className="h-40 w-40">
+                    <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo" data-ai-hint="person" />
+                    <AvatarFallback>MC</AvatarFallback>
+                  </Avatar>
+                  <div className="text-center space-y-3">
+                    <h3 className="text-2xl font-bold">Mark Crimo</h3>
+                    <p className="font-semibold text-primary">The Founder</p>
+                    <div className="inline-block bg-primary/10 text-primary font-bold py-1 px-3 rounded-full">
+                      5 Years of Experience
+                    </div>
+                    <blockquote className="text-muted-foreground italic border-l-4 border-primary/50 pl-4 py-2 text-left">
+                      "In the ever-changing world of cryptocurrency, success requires adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just shaping the future - we're writing the playbook."
+                    </blockquote>
+                    <Link href="https://t.me/Markcrimo6" target="_blank" rel="noopener noreferrer">
+                      <Button>
+                        <Send className="mr-2 h-4 w-4" />
+                        Contact on Telegram
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="flex flex-col items-center gap-6 p-6">
+                  <Avatar className="h-40 w-40">
+                    <AvatarImage src="https://i.postimg.cc/26b01p8v/IMG-20250815-231059-726.jpg" alt="Mikey Marco" data-ai-hint="person" />
+                    <AvatarFallback>MM</AvatarFallback>
+                  </Avatar>
+                  <div className="text-center space-y-3">
+                    <h3 className="text-2xl font-bold">Mikey Marco</h3>
+                    <p className="font-semibold text-primary">Co_Founder</p>
+                    <p className="text-muted-foreground text-sm">Binance Affiliate Binance feed creator & Streamer | Kols Manager Me 50 Channel Admin🚸</p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="flex flex-col items-center gap-6 p-6">
+                  <Avatar className="h-40 w-40">
+                    <AvatarImage src="https://i.postimg.cc/zBKfDBWg/IMG-20250815-230231-790.jpg" alt="Chris Hendrikso" data-ai-hint="person" />
+                    <AvatarFallback>CH</AvatarFallback>
+                  </Avatar>
+                  <div className="text-center space-y-3">
+                    <h3 className="text-2xl font-bold">Chris Hendrikso</h3>
+                    <p className="font-semibold text-primary">Marketing Manager</p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="flex flex-col items-center gap-6 p-6">
+                  <Avatar className="h-40 w-40">
+                    <AvatarImage src="https://i.postimg.cc/bYb92987/IMG-20250815-233551-808.jpg" alt="Rupok" data-ai-hint="person" />
+                    <AvatarFallback>R</AvatarFallback>
+                  </Avatar>
+                  <div className="text-center space-y-3">
+                    <h3 className="text-2xl font-bold">Rupok</h3>
+                    <p className="font-semibold text-primary">CMO</p>
+                  </div>
+                </CardContent>
+              </Card>
+               <Card>
+                <CardContent className="flex flex-col items-center gap-6 p-6">
+                  <Avatar className="h-40 w-40">
+                    <AvatarImage src="https://i.postimg.cc/rFXghYQy/IMG-20250815-233546-893.jpg" alt="Homo sapiens" data-ai-hint="person" />
+                    <AvatarFallback>HS</AvatarFallback>
+                  </Avatar>
+                  <div className="text-center space-y-3">
+                    <h3 className="text-2xl font-bold">Homo sapiens</h3>
+                    <p className="font-semibold text-primary">Host</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        <section id="testimonials" className="py-20 bg-muted/40">
+          <div className="container">
+             <h2 className="text-center text-3xl font-bold">What Our Clients Say</h2>
+             <p className="text-center text-muted-foreground mt-2 mb-10">Real stories from our satisfied partners.</p>
+            <div className="grid gap-8 md:grid-cols-2">
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-4">
+                    <Avatar>
+                      <AvatarImage src="https://placehold.co/100x100.png" alt="Client 1" data-ai-hint="person"/>
+                      <AvatarFallback>C1</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <h3 className="font-bold">Alex Johnson</h3>
+                      <p className="text-sm text-muted-foreground">CEO, NFT Project</p>
+                    </div>
+                     <div className="ml-auto flex items-center gap-1">
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                     </div>
+                  </div>
+                  <p className="mt-4 text-muted-foreground">"CRYPTO FOLEX transformed our community engagement. Their strategies are top-notch and delivered measurable results."</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-4">
+                    <Avatar>
+                      <AvatarImage src="https://placehold.co/100x100.png" alt="Client 2" data-ai-hint="person"/>
+                      <AvatarFallback>C2</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <h3 className="font-bold">Samantha Lee</h3>
+                      <p className="text-sm text-muted-foreground">Founder, DeFi Protocol</p>
+                    </div>
+                    <div className="ml-auto flex items-center gap-1">
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                     </div>
+                  </div>
+                  <p className="mt-4 text-muted-foreground">"The best in the business for crypto marketing. Their team is knowledgeable, responsive, and dedicated to our success."</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+        
+        
 
         <section id="ama-banners" className="py-20">
           <div className="container">
@@ -330,5 +333,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
