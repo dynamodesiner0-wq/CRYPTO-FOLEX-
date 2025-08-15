@@ -132,6 +132,18 @@ export default function LandingPage() {
                 <li>Convey the value you provide to your customers through a friendly and engaging conversation.</li>
               </ol>
             </div>
+             <div className="mt-10">
+              <h3 className="text-2xl font-semibold">Types of AMAs We Provide:</h3>
+              <ol className="mt-6 list-decimal list-inside space-y-4 text-muted-foreground">
+                <li>X Space Voice AMA</li>
+                <li>Telegram Video, Voice, or Text AMA</li>
+                <li>Binance Live Video AMA</li>
+                <li>Discord Video, Voice, or Text AMA</li>
+              </ol>
+               <p className="mt-4 text-muted-foreground">
+                Select the platform that best suits your target audience.
+              </p>
+            </div>
             <div className="mt-10">
               <h3 className="text-2xl font-semibold">Structure of the AMA:</h3>
               <p className="mt-4 text-muted-foreground">
