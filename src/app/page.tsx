@@ -176,7 +176,7 @@ export default function LandingPage() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Easy & Emergency Solutions Anytime</CardTitle>
+                  <CardTitle>Easy &amp; Emergency Solutions Anytime</CardTitle>
                 </CardHeader>
               </Card>
             </div>
@@ -217,7 +217,7 @@ export default function LandingPage() {
               </p>
               <ol className="mt-6 list-decimal list-inside space-y-4 text-muted-foreground">
                 <li>Project Introduction: Kick off the session with 5 introductory questions from the host, giving the audience an overall insight into your project.</li>
-                <li>Live Q&A with the Audience: Engage with the audience directly, clear their doubts, and understand their expectations from the project.</li>
+                <li>Live Q&amp;A with the Audience: Engage with the audience directly, clear their doubts, and understand their expectations from the project.</li>
               </ol>
             </div>
             <div className="mt-10">
@@ -266,7 +266,7 @@ export default function LandingPage() {
                   <div className="text-center space-y-3">
                     <h3 className="text-2xl font-bold">Mikey Marco</h3>
                     <p className="font-semibold text-primary">Co_Founder</p>
-                    <p className="text-muted-foreground text-sm">Binance Affiliate Binance feed creator & Streamer | Kols Manager Me 50 Channel Admin🚸</p>
+                    <p className="text-muted-foreground text-sm">Binance Affiliate Binance feed creator &amp; Streamer | Kols Manager Me 50 Channel Admin🚸</p>
                   </div>
                 </CardContent>
               </Card>
@@ -363,8 +363,6 @@ export default function LandingPage() {
           </div>
         </section>
         
-        
-
         <section id="ama-banners" className="py-20">
           <div className="container">
             <h2 className="text-center text-3xl font-bold">PREVIOUS AMA BANNERS</h2>
