@@ -3,7 +3,6 @@ import { Inter, Source_Code_Pro } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
-import { SidebarProvider } from '@/components/ui/sidebar';
 
 const fontBody = Inter({
   subsets: ['latin'],
@@ -34,9 +33,7 @@ export default function RootLayout({
           fontCode.variable
         )}
       >
-        <SidebarProvider>
-          {children}
-        </SidebarProvider>
+        {children}
         <Toaster />
       </body>
     </html>
