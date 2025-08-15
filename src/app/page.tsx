@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Twitter, Facebook, Linkedin, Instagram, Youtube, Check, Star } from "lucide-react";
+import { Twitter, Facebook, Linkedin, Instagram, Youtube, Check, Star, Send } from "lucide-react";
 import Image from "next/image";
 
 export default function LandingPage() {
@@ -24,6 +24,7 @@ export default function LandingPage() {
           <nav className="hidden items-center gap-4 text-sm font-medium md:flex">
             <Link href="#services" className="transition-colors hover:text-foreground/80">Services</Link>
             <Link href="#testimonials" className="transition-colors hover:text-foreground/80">Testimonials</Link>
+            <Link href="#founder" className="transition-colors hover:text-foreground/80">Founder</Link>
             <Link href="#contact" className="transition-colors hover:text-foreground/80">Contact</Link>
           </nav>
           <div className="flex flex-1 items-center justify-end gap-2">
@@ -153,8 +154,34 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+        
+        <section id="founder" className="py-20 bg-muted/40">
+            <div className="container mx-auto max-w-3xl space-y-8 text-center">
+                 <h2 className="text-center text-3xl font-bold">Meet the Founder</h2>
+                <div className="flex justify-center">
+                    <Card className="max-w-md">
+                        <CardContent className="flex flex-col items-center gap-4 p-6">
+                            <Avatar className="h-32 w-32">
+                                <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo" data-ai-hint="person" />
+                                <AvatarFallback>MC</AvatarFallback>
+                            </Avatar>
+                            <div className="text-center">
+                                <h3 className="text-2xl font-bold">Mark Crimo</h3>
+                                <p className="text-muted-foreground">The Founder</p>
+                            </div>
+                            <Link href="https://t.me/Markcrimo6" target="_blank" rel="noopener noreferrer">
+                                <Button>
+                                    <Send className="mr-2 h-4 w-4" />
+                                    Contact on Telegram
+                                </Button>
+                            </Link>
+                        </CardContent>
+                    </Card>
+                </div>
+            </div>
+        </section>
 
-        <section id="contact" className="py-20 bg-muted/40">
+        <section id="contact" className="py-20">
           <div className="container">
             <div className="grid gap-10 md:grid-cols-2">
               <div>
