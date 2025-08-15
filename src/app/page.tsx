@@ -132,6 +132,22 @@ export default function LandingPage() {
                 <li>Convey the value you provide to your customers through a friendly and engaging conversation.</li>
               </ol>
             </div>
+            <div className="mt-10">
+              <h3 className="text-2xl font-semibold">Structure of the AMA:</h3>
+              <p className="mt-4 text-muted-foreground">
+                The one-hour session is divided into two segments:
+              </p>
+              <ol className="mt-6 list-decimal list-inside space-y-4 text-muted-foreground">
+                <li>Project Introduction: Kick off the session with 5 introductory questions from the host, giving the audience an overall insight into your project.</li>
+                <li>Live Q&A with the Audience: Engage with the audience directly, clear their doubts, and understand their expectations from the project.</li>
+              </ol>
+            </div>
+            <div className="mt-10">
+              <h3 className="text-2xl font-semibold">Why Choose Crypto Folex?</h3>
+              <p className="mt-4 text-muted-foreground">
+                Crypto Folex is verified by Binance and one of the top 3 streamers on Binance Live. Since 2021, we have hosted over 800 AMAs. Our extensive collaboration with various projects over the years has helped us build an enthusiastic and engaged community from scratch. Now, it's your turn to leverage this strength and skyrocket your visibility in the crowded crypto space.
+              </p>
+            </div>
           </div>
         </section>
         
@@ -340,3 +356,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
