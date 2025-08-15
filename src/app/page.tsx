@@ -35,7 +35,7 @@ export default function LandingPage() {
             </Link>
           </div>
           <nav className="hidden items-center gap-4 text-sm font-medium md:flex">
-            <Link href="#services" className="transition-colors hover:text-foreground/80">Services</Link>
+            <Link href="#about" className="transition-colors hover:text-foreground/80">About</Link>
             <Link href="#team" className="transition-colors hover:text-foreground/80">Team</Link>
             <Link href="#testimonials" className="transition-colors hover:text-foreground/80">Testimonials</Link>
             <Link href="#ama-banners" className="transition-colors hover:text-foreground/80">AMA Banners</Link>
@@ -71,58 +71,47 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="services" className="py-20 bg-muted/40">
+        <section id="about" className="py-20 bg-muted/40">
           <div className="container">
-            <h2 className="text-center text-3xl font-bold">Our Services</h2>
-            <p className="text-center text-muted-foreground mt-2 mb-10">We offer a wide range of services to help you grow your business.</p>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold">About Us</h2>
+              <p className="mt-4 max-w-3xl mx-auto text-muted-foreground">
+                We help investors across the world learn about exciting new crypto investments.
+              </p>
+              <p className="mt-4 max-w-3xl mx-auto text-muted-foreground">
+                At CRYPTO FOLEX, we're more than just a marketing agency - we're a community of passionate individuals dedicated to shaping the future of decentralized finance. From facilitating AMA sessions to forging strategic partnerships, we're committed to amplifying the visibility and success of projects within the crypto space.
+              </p>
+            </div>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-12">
               <Card>
                 <CardHeader>
-                  <CardTitle>Social Media Growth</CardTitle>
+                  <CardTitle>Community Promotion</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">We help you grow your social media presence and engage with your audience.</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Content Creation</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">We create high-quality content that resonates with your audience and drives results.</p>
-                </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Community Management</CardTitle>
+                  <CardTitle>Web Development</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">We build and manage a strong community around your brand.</p>
-                </CardContent>
               </Card>
-                 <Card>
+              <Card>
                 <CardHeader>
-                  <CardTitle>KOL &amp; Influencer Marketing</CardTitle>
+                  <CardTitle>Search Engine Optimization</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Connect with key opinion leaders and influencers to amplify your brand's reach.</p>
-                </CardContent>
               </Card>
-                 <Card>
+              <Card>
                 <CardHeader>
-                  <CardTitle>PR &amp; Media Outreach</CardTitle>
+                  <CardTitle>Content Writing</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Secure media coverage and build relationships with journalists and publications.</p>
-                </CardContent>
               </Card>
-                 <Card>
+              <Card>
                 <CardHeader>
-                  <CardTitle>Crypto Marketing</CardTitle>
+                  <CardTitle>Graphics Designing</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Specialized marketing strategies tailored for the unique crypto landscape.</p>
-                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Easy & Emergency Solutions Anytime</CardTitle>
+                </CardHeader>
               </Card>
             </div>
           </div>
