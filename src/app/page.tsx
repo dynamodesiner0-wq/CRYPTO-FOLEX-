@@ -23,9 +23,6 @@ function LandingPageContent() {
     { src: "https://i.postimg.cc/L8KNhQrg/IMG-20250815-230702-512.jpg", alt: "AMA Banner 7" },
     { src: "https://i.postimg.cc/y6GfC8jP/IMG-20250815-230704-161.jpg", alt: "AMA Banner 8" },
     { src: "https://i.postimg.cc/QCvSQfCP/IMG-20250815-230705-599.jpg", alt: "AMA Banner 9" },
-    { src: "https://i.postimg.cc/fbLKPVpD/IMG-20250816-003019-105.jpg", alt: "AMA Banner 10" },
-    { src: "https://i.postimg.cc/RZGdG7Pg/IMG-20250816-003038.jpg", alt: "AMA Banner 11" },
-    { src: "https://i.postimg.cc/W1sSMW7D/IMG-20250816-003057.jpg", alt: "AMA Banner 12" },
   ];
 
   const navLinks = [
@@ -503,5 +500,3 @@ export default function Page() {
 
   return isClient ? <LandingPageContent /> : null;
 }
-
-    
