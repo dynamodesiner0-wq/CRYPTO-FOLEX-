@@ -59,59 +59,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="testimonials" className="py-20">
-          <div className="container">
-             <h2 className="text-center text-3xl font-bold">What Our Clients Say</h2>
-             <p className="text-center text-muted-foreground mt-2 mb-10">Real stories from our satisfied partners.</p>
-            <div className="grid gap-8 md:grid-cols-2">
-              <Card>
-                <CardContent className="pt-6">
-                  <div className="flex items-center gap-4">
-                    <Avatar>
-                      <AvatarImage src="https://placehold.co/100x100.png" alt="Client 1" data-ai-hint="person"/>
-                      <AvatarFallback>C1</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <h3 className="font-bold">Alex Johnson</h3>
-                      <p className="text-sm text-muted-foreground">CEO, NFT Project</p>
-                    </div>
-                     <div className="ml-auto flex items-center gap-1">
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                     </div>
-                  </div>
-                  <p className="mt-4 text-muted-foreground">"CRYPTO FOLEX transformed our community engagement. Their strategies are top-notch and delivered measurable results."</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="pt-6">
-                  <div className="flex items-center gap-4">
-                    <Avatar>
-                      <AvatarImage src="https://placehold.co/100x100.png" alt="Client 2" data-ai-hint="person"/>
-                      <AvatarFallback>C2</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <h3 className="font-bold">Samantha Lee</h3>
-                      <p className="text-sm text-muted-foreground">Founder, DeFi Protocol</p>
-                    </div>
-                    <div className="ml-auto flex items-center gap-1">
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                     </div>
-                  </div>
-                  <p className="mt-4 text-muted-foreground">"The best in the business for crypto marketing. Their team is knowledgeable, responsive, and dedicated to our success."</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-        
         <section id="team" className="py-20 bg-muted/40">
           <div className="container mx-auto max-w-6xl space-y-12 text-center">
             <h2 className="text-center text-3xl font-bold">Meet Our Team</h2>
@@ -180,6 +127,59 @@ export default function LandingPage() {
           </div>
         </section>
 
+        <section id="testimonials" className="py-20">
+          <div className="container">
+             <h2 className="text-center text-3xl font-bold">What Our Clients Say</h2>
+             <p className="text-center text-muted-foreground mt-2 mb-10">Real stories from our satisfied partners.</p>
+            <div className="grid gap-8 md:grid-cols-2">
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-4">
+                    <Avatar>
+                      <AvatarImage src="https://placehold.co/100x100.png" alt="Client 1" data-ai-hint="person"/>
+                      <AvatarFallback>C1</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <h3 className="font-bold">Alex Johnson</h3>
+                      <p className="text-sm text-muted-foreground">CEO, NFT Project</p>
+                    </div>
+                     <div className="ml-auto flex items-center gap-1">
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                     </div>
+                  </div>
+                  <p className="mt-4 text-muted-foreground">"CRYPTO FOLEX transformed our community engagement. Their strategies are top-notch and delivered measurable results."</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-4">
+                    <Avatar>
+                      <AvatarImage src="https://placehold.co/100x100.png" alt="Client 2" data-ai-hint="person"/>
+                      <AvatarFallback>C2</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <h3 className="font-bold">Samantha Lee</h3>
+                      <p className="text-sm text-muted-foreground">Founder, DeFi Protocol</p>
+                    </div>
+                    <div className="ml-auto flex items-center gap-1">
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                     </div>
+                  </div>
+                  <p className="mt-4 text-muted-foreground">"The best in the business for crypto marketing. Their team is knowledgeable, responsive, and dedicated to our success."</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+        
         <section id="services" className="py-20 bg-muted/40">
           <div className="container">
             <h2 className="text-center text-3xl font-bold">Our Services</h2>
@@ -306,3 +306,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
