@@ -46,6 +46,14 @@ export default function DashboardLayout({
                   </SidebarMenuButton>
                 </Link>
               </SidebarMenuItem>
+              <SidebarMenuItem>
+                <Link href="/dashboard/about" className="w-full">
+                  <SidebarMenuButton>
+                    <LayoutGrid />
+                    <span>About</span>
+                  </SidebarMenuButton>
+                </Link>
+              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarContent>
         </Sidebar>
