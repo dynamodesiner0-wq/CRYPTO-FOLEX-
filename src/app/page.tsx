@@ -47,15 +47,27 @@ export default function LandingPage() {
         </div>
       </header>
       <main className="flex-1">
-        <section className="py-20 text-center">
-          <div className="container">
-            <h1 className="text-4xl font-extrabold tracking-tighter md:text-6xl">
-              Your Premier Web3 Media Powerhouse
-            </h1>
-            <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
-              Generate engagement and sales with our expert team, who have worked with the biggest projects. Relax, we handle it all for you.
-            </p>
-            <Button size="lg" className="mt-6">Get Started</Button>
+        <section className="py-20">
+          <div className="container grid md:grid-cols-2 gap-10 items-center">
+            <div className="space-y-4 text-center md:text-left">
+              <h1 className="text-4xl font-extrabold tracking-tighter md:text-6xl">
+                Your Premier Web3 Media Powerhouse
+              </h1>
+              <p className="mx-auto max-w-xl text-lg text-muted-foreground md:mx-0">
+                Generate engagement and sales with our expert team, who have worked with the biggest projects. Relax, we handle it all for you.
+              </p>
+              <Button size="lg" className="mt-6">Get Started</Button>
+            </div>
+            <div className="flex justify-center">
+              <Image 
+                src="https://i.postimg.cc/15trXhCz/image-search-1755280175089.webp" 
+                alt="Web3 Media Powerhouse" 
+                width={500} 
+                height={500} 
+                className="rounded-lg shadow-xl"
+                data-ai-hint="abstract illustration"
+              />
+            </div>
           </div>
         </section>
 
@@ -211,7 +223,7 @@ export default function LandingPage() {
               </Card>
                  <Card>
                 <CardHeader>
-                  <CardTitle>KOL & Influencer Marketing</CardTitle>
+                  <CardTitle>KOL &amp; Influencer Marketing</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">Connect with key opinion leaders and influencers to amplify your brand's reach.</p>
@@ -219,7 +231,7 @@ export default function LandingPage() {
               </Card>
                  <Card>
                 <CardHeader>
-                  <CardTitle>PR & Media Outreach</CardTitle>
+                  <CardTitle>PR &amp; Media Outreach</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">Secure media coverage and build relationships with journalists and publications.</p>
