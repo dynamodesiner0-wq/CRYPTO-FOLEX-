@@ -8,8 +8,9 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Twitter, Check, Star, Send, Badge, Briefcase } from "lucide-react";
+import { Twitter, Check, Star, Send, Badge, Briefcase, Menu, Link as LinkIcon, Video } from "lucide-react";
 import Image from "next/image";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 
 export default function LandingPage() {
   const amaBanners = [
@@ -24,6 +25,22 @@ export default function LandingPage() {
     { src: "https://i.postimg.cc/QCvSQfCP/IMG-20250815-230705-599.jpg", alt: "AMA Banner 9" },
   ];
 
+  const navLinks = [
+    { href: "#about", label: "About" },
+    { href: "#team", label: "Team" },
+    { href: "#testimonials", label: "Testimonials" },
+    { href: "#ama-banners", label: "AMA Banners" },
+    { href: "#partners", label: "Our Partners" },
+    { href: "#contact", label: "Contact" },
+  ];
+
+  const socialLinks = [
+    { href: "https://t.me/cryptofolex", label: "Telegram Group", icon: <Send size={20} /> },
+    { href: "https://t.me/Cryptofolex1", label: "Telegram Channel", icon: <Send size={20} /> },
+    { href: "https://www.binance.com/en/live/u/72409192", label: "Binance Live", icon: <Briefcase size={20} /> },
+    { href: "https://x.com/Folex00", label: "X", icon: <Twitter size={20} /> },
+  ];
+
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -35,15 +52,60 @@ export default function LandingPage() {
             </Link>
           </div>
           <nav className="hidden items-center gap-4 text-sm font-medium md:flex">
-            <Link href="#about" className="transition-colors hover:text-foreground/80">About</Link>
-            <Link href="#team" className="transition-colors hover:text-foreground/80">Team</Link>
-            <Link href="#testimonials" className="transition-colors hover:text-foreground/80">Testimonials</Link>
-            <Link href="#ama-banners" className="transition-colors hover:text-foreground/80">AMA Banners</Link>
-             <Link href="#partners" className="transition-colors hover:text-foreground/80">Our Partners</Link>
-            <Link href="#contact" className="transition-colors hover:text-foreground/80">Contact</Link>
+            {navLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="transition-colors hover:text-foreground/80">{link.label}</Link>
+            ))}
           </nav>
           <div className="flex flex-1 items-center justify-end gap-2">
-            <Button>Get a Quote</Button>
+            <Button className="hidden md:inline-flex">Get a Quote</Button>
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="md:hidden">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Toggle Menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-full max-w-sm bg-background p-6">
+                <div className="flex flex-col h-full">
+                  <div className="flex items-center justify-between pb-4 border-b">
+                     <Link href="/" className="flex items-center gap-2 font-bold">
+                       <Image src="https://i.postimg.cc/Nj9QDFMr/IMG-20250815-212508-948.jpg" alt="CRYPTO FOLEX Logo" width={32} height={32} className="h-8 w-8" />
+                       <span>CRYPTO FOLEX</span>
+                    </Link>
+                    <SheetClose asChild>
+                       <Button variant="ghost" size="icon">
+                         <Menu className="h-6 w-6" />
+                         <span className="sr-only">Close Menu</span>
+                       </Button>
+                    </SheetClose>
+                  </div>
+                  <div className="flex-1 overflow-y-auto">
+                    <nav className="flex flex-col gap-4 py-6">
+                        <h3 className="font-semibold text-lg">Sitemap</h3>
+                        {navLinks.map((link) => (
+                          <SheetClose asChild key={link.href}>
+                             <Link href={link.href} className="text-muted-foreground hover:text-foreground">{link.label}</Link>
+                          </SheetClose>
+                        ))}
+                    </nav>
+                    <div className="py-6 border-t">
+                      <h3 className="font-semibold text-lg mb-4">Social Links</h3>
+                      <div className="flex flex-col gap-4">
+                        {socialLinks.map((link) => (
+                           <Link key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-foreground">
+                             {link.icon}
+                             <span>{link.label}</span>
+                           </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                   <div className="mt-auto">
+                      <Button className="w-full">Get a Quote</Button>
+                   </div>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </header>
@@ -375,23 +437,13 @@ export default function LandingPage() {
           <div className="mb-4">
             <p className="text-lg font-semibold">Our all socials :⬇️💖</p>
           </div>
-          <div className="flex justify-center gap-4 mb-4">
-            <Link href="https://t.me/cryptofolex" target="_blank" rel="noopener noreferrer" className="hover:text-foreground flex items-center gap-2">
-              <Send size={20} /> 
-              <span>Telegram Group</span>
-            </Link>
-            <Link href="https://t.me/Cryptofolex1" target="_blank" rel="noopener noreferrer" className="hover:text-foreground flex items-center gap-2">
-              <Send size={20} />
-              <span>Telegram Channel</span>
-            </Link>
-            <Link href="https://www.binance.com/en/live/u/72409192" target="_blank" rel="noopener noreferrer" className="hover:text-foreground flex items-center gap-2">
-              <Briefcase size={20} />
-              <span>Binance Live</span>
-            </Link>
-            <Link href="https://x.com/Folex00" target="_blank" rel="noopener noreferrer" className="hover:text-foreground flex items-center gap-2">
-              <Twitter size={20} />
-              <span>X</span>
-            </Link>
+          <div className="flex justify-center gap-4 mb-4 flex-wrap">
+            {socialLinks.map((link) => (
+              <Link key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className="hover:text-foreground flex items-center gap-2">
+                {link.icon}
+                <span>{link.label}</span>
+              </Link>
+            ))}
           </div>
           <p>&copy; {new Date().getFullYear()} CRYPTO FOLEX. All rights reserved.</p>
         </div>
@@ -399,3 +451,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
