@@ -1,180 +1,52 @@
-"use client";
+import type { SVGProps } from "react";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
-import { generateContentAction } from "@/app/actions";
-import { WandSparkles } from "lucide-react";
-import { ScrollArea } from "./ui/scroll-area";
-
-const formSchema = z.object({
-  websiteType: z.string().min(3, {
-    message: "Website type must be at least 3 characters.",
-  }),
-  headings: z.string().min(5, {
-    message: "Headings must be at least 5 characters.",
-  }),
-  paragraphs: z.string().min(10, {
-    message: "Paragraphs content must be at least 10 characters.",
-  }),
-  customizations: z.string().optional(),
-});
-
-type ContentFormProps = {
-  setIsLoading: (isLoading: boolean) => void;
-  setGeneratedHtml: (html: string | null) => void;
-  isLoading: boolean;
+export const Icons = {
+  logo: (props: SVGProps<SVGSVGElement>) => (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+      <path d="M2 17l10 5 10-5" />
+      <path d="M2 12l10 5 10-5" />
+    </svg>
+  ),
+  twitter: (props: SVGProps<SVGSVGElement>) => (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M22 4s-.7 2.1-2 3.4c1.6 1.4 3.3 4.4 3.3 4.4s-1.4 1.4-3.3 1.4c-1 .8-2.1 2.8-2.1 2.8s-.1-2.1-2.1-4.4c-2.1-2.2-4.2-3.3-4.2-3.3s1.4-.6 2.8-1.4c1.4-.8 2.8-1.4 2.8-1.4s-2.1 1.4-3.3 2.8c-1.2 1.4-2.1 2.8-2.1 2.8s.1-1.2.8-2.1c.6-.9 1.4-2.1 1.4-2.1s-2.1 1.4-3.3 2.8c-1.2 1.4-2.1 2.8-2.1 2.8s.1-1.2.8-2.1c.6-.9 1.4-2.1 1.4-2.1s-2.1 1.4-3.3 2.8c-1.2 1.4-2.1 2.8-2.1 2.8s.1-1.2.8-2.1c.6-.9 1.4-2.1 1.4-2.1s-2.1 1.4-3.3 2.8c-1.2 1.4-2.1 2.8-2.1 2.8s.1-1.2.8-2.1c.6-.9 1.4-2.1 1.4-2.1S2 10.1 2 12.2s.1 2.1 2.1 2.1 2.1-1.4 2.1-1.4" />
+    </svg>
+  ),
+  github: (props: SVGProps<SVGSVGElement>) => (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+    </svg>
+  ),
 };
-
-export function ContentForm({
-  setIsLoading,
-  setGeneratedHtml,
-  isLoading,
-}: ContentFormProps) {
-  const { toast } = useToast();
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      websiteType: "",
-      headings: "",
-      paragraphs: "",
-      customizations: "",
-    },
-  });
-
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsLoading(true);
-    setGeneratedHtml(null);
-
-    try {
-      const result = await generateContentAction(values);
-      if (result.success) {
-        setGeneratedHtml(result.data);
-      } else {
-        toast({
-          variant: "destructive",
-          title: "Generation Failed",
-          description: result.error,
-        });
-      }
-    } catch (error) {
-      toast({
-        variant: "destructive",
-        title: "An unexpected error occurred",
-        description: "Please check the console for more details.",
-      });
-      console.error(error);
-    } finally {
-      setIsLoading(false);
-    }
-  }
-
-  return (
-    <ScrollArea className="h-full">
-      <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit)}
-          className="flex h-full flex-col p-4"
-        >
-          <div className="flex-1 space-y-6">
-            <FormField
-              control={form.control}
-              name="websiteType"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Website Type</FormLabel>
-                  <FormControl>
-                    <Input placeholder="e.g., Portfolio, Blog, E-commerce" {...field} />
-                  </FormControl>
-                  <FormDescription>
-                    What kind of website are you building?
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="headings"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Headings</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder="e.g., Welcome, About Me, My Projects"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormDescription>
-                    List the main headings for your page.
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="paragraphs"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Paragraph Content</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder="Describe the content for your paragraphs..."
-                      rows={5}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormDescription>
-                    What should the AI write about?
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="customizations"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Customizations</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder="e.g., Use a dark theme, add a contact form, make it playful"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormDescription>
-                    Any specific design or content requests?
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          <div className="mt-8 pt-4">
-            <Button type="submit" className="w-full" disabled={isLoading}>
-              <WandSparkles className="mr-2 h-4 w-4" />
-              {isLoading ? "Generating..." : "Generate Website"}
-            </Button>
-          </div>
-        </form>
-      </Form>
-    </ScrollArea>
-  );
-}

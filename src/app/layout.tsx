@@ -15,8 +15,8 @@ const fontCode = Source_Code_Pro({
 });
 
 export const metadata: Metadata = {
-  title: 'Web Weaver',
-  description: 'Generate beautiful webpages with the power of AI',
+  title: 'CRYPTO FOLEX',
+  description: 'Your Premier Web3 Media Powerhouse',
 };
 
 export default function RootLayout({

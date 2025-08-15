@@ -1,98 +1,71 @@
 "use client";
 
 import * as React from "react";
-import {
-  SidebarProvider,
-  Sidebar,
-  SidebarHeader,
-  SidebarContent,
-  SidebarInset,
-  SidebarTrigger,
-} from "@/components/ui/sidebar";
-import { ContentForm } from "@/components/content-form";
-import { ContentDisplay } from "@/components/content-display";
-import { Icons } from "@/components/icons";
-import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { FileCode, BotMessageSquare } from "lucide-react";
+import { Icons } from "@/components/icons";
+import { PlayCircle } from "lucide-react";
 
 export default function Home() {
-  const [generatedHtml, setGeneratedHtml] = React.useState<string | null>(null);
-  const [isLoading, setIsLoading] = React.useState(false);
-
   return (
-    <SidebarProvider>
-      <div className="min-h-screen">
-        <Sidebar>
-          <SidebarHeader>
-            <div className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                <Icons.logo className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <h1 className="text-xl font-semibold">Web Weaver</h1>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Describe your ideal website, and let our AI bring it to life.
-            </p>
-          </SidebarHeader>
-          <Separator />
-          <SidebarContent className="p-0">
-            <ContentForm
-              setIsLoading={setIsLoading}
-              setGeneratedHtml={setGeneratedHtml}
-              isLoading={isLoading}
-            />
-          </SidebarContent>
-        </Sidebar>
-        <SidebarInset>
-          <div className="flex h-full flex-col">
-            <header className="flex h-14 items-center gap-4 border-b bg-background/95 px-4 backdrop-blur-sm sm:px-6">
-              <SidebarTrigger className="md:hidden" />
-              <div className="flex-1">
-                {generatedHtml && (
-                  <h2 className="text-lg font-semibold">Generated Webpage</h2>
-                )}
-              </div>
-              <div>
-                {generatedHtml && !isLoading && (
-                  <ContentDisplay content={generatedHtml} isHeaderButton={true} />
-                )}
-              </div>
-            </header>
-            <main className="flex-1 overflow-auto p-4 md:p-6">
-              {isLoading && (
-                <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
-                  <BotMessageSquare className="h-16 w-16 animate-bounce text-primary" />
-                  <h2 className="text-2xl font-semibold tracking-tight">
-                    Weaving your website...
-                  </h2>
-                  <p className="max-w-md text-muted-foreground">
-                    Our AI is currently crafting your webpage. This may take a few
-                    moments. Please wait.
-                  </p>
-                </div>
-              )}
-              {!isLoading && !generatedHtml && (
-                <div className="flex h-full flex-col items-center justify-center gap-4 rounded-xl border-2 border-dashed bg-muted/50 p-8 text-center">
-                  <div className="rounded-full border-8 border-dashed border-primary/20 bg-primary/10 p-6">
-                    <FileCode className="h-16 w-16 text-primary" />
-                  </div>
-                  <h2 className="text-2xl font-semibold tracking-tight">
-                    Your Webpage Awaits
-                  </h2>
-                  <p className="max-w-md text-muted-foreground">
-                    Fill out the form on the left to generate your custom
-                    website content. Your preview will appear here.
-                  </p>
-                </div>
-              )}
-              {!isLoading && generatedHtml && (
-                <ContentDisplay content={generatedHtml} isHeaderButton={false} />
-              )}
-            </main>
+    <div className="flex min-h-screen flex-col bg-background text-foreground">
+      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-14 items-center">
+          <div className="mr-4 flex">
+            <a className="flex items-center space-x-2" href="/">
+              <Icons.logo className="h-8 w-8" />
+              <span className="font-bold">CRYPTO FOLEX</span>
+            </a>
           </div>
-        </SidebarInset>
-      </div>
-    </SidebarProvider>
+          <div className="flex flex-1 items-center justify-end space-x-2">
+            <nav className="flex items-center">
+              <Button variant="ghost">Home</Button>
+              <Button variant="ghost">About</Button>
+              <Button variant="ghost">Services</Button>
+              <Button variant="ghost">Contact</Button>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main className="flex-1">
+        <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
+          <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
+            <div className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium">
+              <span className="mr-2 h-2 w-2 rounded-full bg-primary"></span>
+              Your Premier Web3 Media Powerhouse
+              <span className="ml-2 h-2 w-2 rounded-full bg-primary"></span>
+            </div>
+            <h1 className="text-4xl font-extrabold leading-tight tracking-tighter md:text-6xl">
+              All you need to grow your business, in one place
+            </h1>
+            <p className="max-w-xl text-lg text-muted-foreground">
+              Generate engagement and sales with our expert team, who have
+              worked with the biggest project. Relax, we handle it all for you.
+            </p>
+          </div>
+          <div className="flex justify-center gap-4">
+            <Button size="lg">View Pricing</Button>
+            <Button size="lg" variant="outline">
+              <PlayCircle className="mr-2 h-5 w-5" />
+              Get Started
+            </Button>
+          </div>
+        </section>
+      </main>
+      <footer className="bg-muted py-6 md:py-8">
+        <div className="container grid items-center gap-4 md:grid-cols-2">
+          <p className="text-center text-sm text-muted-foreground md:text-left">
+            © {new Date().getFullYear()} CRYPTO FOLEX. All rights reserved.
+          </p>
+          <div className="flex justify-center gap-4 md:justify-end">
+            <a href="#" className="text-muted-foreground hover:text-foreground">
+              <Icons.twitter className="h-6 w-6" />
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-foreground">
+              <Icons.github className="h-6 w-6" />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }
