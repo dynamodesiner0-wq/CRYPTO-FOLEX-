@@ -3,9 +3,10 @@
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
-import { PlayCircle, Play } from "lucide-react";
+import { PlayCircle, Play, Users, FileText, MessagesSquare } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
   return (
@@ -23,7 +24,9 @@ export default function Home() {
               <Button variant="ghost" asChild>
                 <Link href="/">Home</Link>
               </Button>
-              <Button variant="ghost">About</Button>
+              <Button variant="ghost" asChild>
+                <Link href="/about">About</Link>
+              </Button>
               <Button variant="ghost" asChild>
                 <Link href="/services">Services</Link>
               </Button>

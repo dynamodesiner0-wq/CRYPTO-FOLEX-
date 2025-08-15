@@ -24,7 +24,9 @@ export default function ServicesPage() {
               <Button variant="ghost" asChild>
                 <Link href="/">Home</Link>
               </Button>
-              <Button variant="ghost">About</Button>
+              <Button variant="ghost" asChild>
+                <Link href="/about">About</Link>
+              </Button>
               <Button variant="ghost" asChild>
                 <Link href="/services">Services</Link>
               </Button>
