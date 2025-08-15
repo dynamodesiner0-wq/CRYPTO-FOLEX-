@@ -20,9 +20,6 @@ function LandingPageContent() {
     { src: "https://i.postimg.cc/tg9kNZRX/IMG-20250815-230656-846.jpg", alt: "AMA Banner 4" },
     { src: "https://i.postimg.cc/vZrXnLsq/IMG-20250815-230658-412.jpg", alt: "AMA Banner 5" },
     { src: "https://i.postimg.cc/MKj96Jr8/IMG-20250815-230701-181.jpg", alt: "AMA Banner 6" },
-    { src: "https://i.postimg.cc/L8KNhQrg/IMG-20250815-230702-512.jpg", alt: "AMA Banner 7" },
-    { src: "https://i.postimg.cc/y6GfC8jP/IMG-20250815-230704-161.jpg", alt: "AMA Banner 8" },
-    { src: "https://i.postimg.cc/QCvSQfCP/IMG-20250815-230705-599.jpg", alt: "AMA Banner 9" },
   ];
 
   const navLinks = [
@@ -124,7 +121,7 @@ function LandingPageContent() {
           <div className="container grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-4 text-center md:text-left">
               <h1 className="text-4xl font-extrabold tracking-tighter md:text-6xl">
-                Your Premier Web3 Media Powerhouse
+                All you need to grow your business, In one place
               </h1>
               <p className="mx-auto max-w-xl text-lg text-muted-foreground md:mx-0">
                 Generate engagement and sales with our expert team, who have worked with the biggest projects. Relax, we handle it all for you.
