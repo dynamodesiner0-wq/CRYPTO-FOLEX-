@@ -12,7 +12,7 @@ import { Twitter, Check, Star, Send, Briefcase, Menu } from "lucide-react";
 import Image from "next/image";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 
-export default function LandingPage() {
+function LandingPageContent() {
   const amaBanners = [
     { src: "https://i.postimg.cc/zfNt227Y/IMG-20250815-230700-438.jpg", alt: "AMA Banner 1" },
     { src: "https://i.postimg.cc/8CwHKpsL/IMG-20250815-230653-749.jpg", alt: "AMA Banner 2" },
@@ -70,7 +70,7 @@ export default function LandingPage() {
               </SheetTrigger>
               <SheetContent side="right" className="w-full max-w-sm bg-background p-6">
                 <SheetHeader>
-                  <SheetTitle className="sr-only">Menu</SheetTitle>
+                  <SheetTitle>Menu</SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between pb-4 border-b">
@@ -372,7 +372,7 @@ export default function LandingPage() {
             <p className="text-center text-muted-foreground mt-2 mb-10">Check out some of our previous AMA banners.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {amaBanners.map((banner, index) => (
-                <div key={index} className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <div key={banner.src} className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   <Image
                     src={banner.src}
                     alt={banner.alt}
@@ -454,6 +454,17 @@ export default function LandingPage() {
       </footer>
     </div>
   );
+}
+
+
+export default function Page() {
+  const [isClient, setIsClient] = React.useState(false)
+
+  React.useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  return isClient ? <LandingPageContent /> : null;
 }
 
     
