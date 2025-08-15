@@ -3,11 +3,11 @@
 import * as React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Twitter, Facebook, Linkedin, Instagram, Youtube, Check, Star, Send } from "lucide-react";
+import { Twitter, Facebook, Linkedin, Instagram, Youtube, Check, Star, Send, Badge } from "lucide-react";
 import Image from "next/image";
 
 export default function LandingPage() {
@@ -156,25 +156,33 @@ export default function LandingPage() {
         </section>
         
         <section id="founder" className="py-20 bg-muted/40">
-            <div className="container mx-auto max-w-3xl space-y-8 text-center">
+            <div className="container mx-auto max-w-4xl space-y-8 text-center">
                  <h2 className="text-center text-3xl font-bold">Meet the Founder</h2>
                 <div className="flex justify-center">
-                    <Card className="max-w-md">
-                        <CardContent className="flex flex-col items-center gap-4 p-6">
-                            <Avatar className="h-32 w-32">
-                                <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo" data-ai-hint="person" />
-                                <AvatarFallback>MC</AvatarFallback>
-                            </Avatar>
-                            <div className="text-center">
-                                <h3 className="text-2xl font-bold">Mark Crimo</h3>
-                                <p className="text-muted-foreground">The Founder</p>
+                    <Card className="w-full">
+                        <CardContent className="flex flex-col md:flex-row items-center gap-8 p-6">
+                            <div className="flex-shrink-0">
+                                <Avatar className="h-40 w-40">
+                                    <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo" data-ai-hint="person" />
+                                    <AvatarFallback>MC</AvatarFallback>
+                                </Avatar>
                             </div>
-                            <Link href="https://t.me/Markcrimo6" target="_blank" rel="noopener noreferrer">
-                                <Button>
-                                    <Send className="mr-2 h-4 w-4" />
-                                    Contact on Telegram
-                                </Button>
-                            </Link>
+                            <div className="text-center md:text-left space-y-4">
+                                <h3 className="text-2xl font-bold">Mark Crimo</h3>
+                                <p className="font-semibold text-primary">The Founder</p>
+                                <div className="inline-block bg-primary/10 text-primary font-bold py-1 px-3 rounded-full">
+                                  5 Years of Experience
+                                </div>
+                                <blockquote className="text-muted-foreground italic border-l-4 border-primary/50 pl-4">
+                                "In the ever-changing world of cryptocurrency, success requires adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just shaping the future - we're writing the playbook."
+                                </blockquote>
+                                <Link href="https://t.me/Markcrimo6" target="_blank" rel="noopener noreferrer">
+                                    <Button>
+                                        <Send className="mr-2 h-4 w-4" />
+                                        Contact on Telegram
+                                    </Button>
+                                </Link>
+                            </div>
                         </CardContent>
                     </Card>
                 </div>
@@ -229,3 +237,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
