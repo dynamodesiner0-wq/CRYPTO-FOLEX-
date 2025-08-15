@@ -126,7 +126,7 @@ export default function LandingPage() {
               <Card>
                 <CardContent className="flex flex-col items-center gap-6 p-6">
                   <Avatar className="h-40 w-40">
-                    <AvatarImage src="https://i.postimg.cc/9QDCF0HQ/IMG-20250815-230400-397.jpg" alt="Rupok" data-ai-hint="person" />
+                    <AvatarImage src="https://i.postimg.cc/bYb92987/IMG-20250815-233551-808.jpg" alt="Rupok" data-ai-hint="person" />
                     <AvatarFallback>R</AvatarFallback>
                   </Avatar>
                   <div className="text-center space-y-3">
