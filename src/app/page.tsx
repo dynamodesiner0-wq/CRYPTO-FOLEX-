@@ -4,6 +4,7 @@ import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
 import { PlayCircle } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         <div className="container flex h-14 items-center">
           <div className="mr-4 flex">
             <a className="flex items-center space-x-2" href="/">
-              <Icons.logo className="h-8 w-8" />
+              <Image src="https://i.postimg.cc/Nj9QDFMr/IMG-20250815-212508-948.jpg" alt="CRYPTO FOLEX Logo" width={32} height={32} className="h-8 w-8" />
               <span className="font-bold">CRYPTO FOLEX</span>
             </a>
           </div>
