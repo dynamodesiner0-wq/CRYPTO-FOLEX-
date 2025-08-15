@@ -323,7 +323,7 @@ export default function LandingPage() {
 
         <section id="partners" className="py-20 bg-muted/40">
           <div className="container">
-            <h2 className="text-center text-3xl font-bold">OUR PARTNERS</h2>
+            
             <div className="flex justify-center mt-10">
               <Image
                 src="https://i.postimg.cc/VsZ5mdJd/IMG-20250816-000252-563.png"
@@ -385,3 +385,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
