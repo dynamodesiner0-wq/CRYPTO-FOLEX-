@@ -39,6 +39,7 @@ export default function LandingPage() {
             <Link href="#team" className="transition-colors hover:text-foreground/80">Team</Link>
             <Link href="#testimonials" className="transition-colors hover:text-foreground/80">Testimonials</Link>
             <Link href="#ama-banners" className="transition-colors hover:text-foreground/80">AMA Banners</Link>
+             <Link href="#partners" className="transition-colors hover:text-foreground/80">Our Partners</Link>
             <Link href="#contact" className="transition-colors hover:text-foreground/80">Contact</Link>
           </nav>
           <div className="flex flex-1 items-center justify-end gap-2">
@@ -319,8 +320,24 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+
+        <section id="partners" className="py-20 bg-muted/40">
+          <div className="container">
+            <h2 className="text-center text-3xl font-bold">OUR PARTNERS</h2>
+            <div className="flex justify-center mt-10">
+              <Image
+                src="https://i.postimg.cc/VsZ5mdJd/IMG-20250816-000252-563.png"
+                alt="Our Partners"
+                width={1200}
+                height={600}
+                className="rounded-lg shadow-lg"
+                data-ai-hint="partner logos"
+              />
+            </div>
+          </div>
+        </section>
         
-        <section id="contact" className="py-20 bg-muted/40">
+        <section id="contact" className="py-20">
           <div className="container">
             <div className="grid gap-10 md:grid-cols-2">
               <div>
