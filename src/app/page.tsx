@@ -116,6 +116,24 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+
+        <section id="ama-intro" className="py-20">
+          <div className="container max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center">Introducing Crypto Folex AMA Sessions</h2>
+            <div className="mt-10">
+              <h3 className="text-2xl font-semibold">What is an AMA?</h3>
+              <p className="mt-4 text-muted-foreground">
+                An AMA (Ask Me Anything) is a 1-hour long live session between you and our audience. It's an interactive session where you can:
+              </p>
+              <ol className="mt-6 list-decimal list-inside space-y-4 text-muted-foreground">
+                <li>Present your unique selling points to a large audience.</li>
+                <li>Address and clear any doubts that the community may have, which could be hindering their decision to buy your product.</li>
+                <li>Explain the vision the project is following and future potential of your project.</li>
+                <li>Convey the value you provide to your customers through a friendly and engaging conversation.</li>
+              </ol>
+            </div>
+          </div>
+        </section>
         
         <section id="team" className="py-20">
           <div className="container mx-auto max-w-6xl space-y-12 text-center">
