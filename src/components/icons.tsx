@@ -12,9 +12,10 @@ export const Icons = {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M12 2L2 7l10 5 10-5-10-5z" />
-      <path d="M2 17l10 5 10-5" />
-      <path d="M2 12l10 5 10-5" />
+      <circle cx="12" cy="12" r="10" />
+      <path d="M16 12h-4a2 2 0 0 0-2 2v0a2 2 0 0 0 2 2h4" />
+      <path d="M14 8v8" />
+      <path d="M17.5 7.5a9 9 0 1 0-5.5 8" />
     </svg>
   ),
   twitter: (props: SVGProps<SVGSVGElement>) => (
