@@ -24,7 +24,7 @@ export default function LandingPage() {
           <nav className="hidden items-center gap-4 text-sm font-medium md:flex">
             <Link href="#services" className="transition-colors hover:text-foreground/80">Services</Link>
             <Link href="#testimonials" className="transition-colors hover:text-foreground/80">Testimonials</Link>
-            <Link href="#founder" className="transition-colors hover:text-foreground/80">Founder</Link>
+            <Link href="#team" className="transition-colors hover:text-foreground/80">Team</Link>
             <Link href="#contact" className="transition-colors hover:text-foreground/80">Contact</Link>
           </nav>
           <div className="flex flex-1 items-center justify-end gap-2">
@@ -155,38 +155,48 @@ export default function LandingPage() {
           </div>
         </section>
         
-        <section id="founder" className="py-20 bg-muted/40">
-            <div className="container mx-auto max-w-4xl space-y-8 text-center">
-                 <h2 className="text-center text-3xl font-bold">Meet the Founder</h2>
-                <div className="flex justify-center">
-                    <Card className="w-full">
-                        <CardContent className="flex flex-col md:flex-row items-center gap-8 p-6">
-                            <div className="flex-shrink-0">
-                                <Avatar className="h-40 w-40">
-                                    <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo" data-ai-hint="person" />
-                                    <AvatarFallback>MC</AvatarFallback>
-                                </Avatar>
-                            </div>
-                            <div className="text-center md:text-left space-y-4">
-                                <h3 className="text-2xl font-bold">Mark Crimo</h3>
-                                <p className="font-semibold text-primary">The Founder</p>
-                                <div className="inline-block bg-primary/10 text-primary font-bold py-1 px-3 rounded-full">
-                                  5 Years of Experience
-                                </div>
-                                <blockquote className="text-muted-foreground italic border-l-4 border-primary/50 pl-4">
-                                "In the ever-changing world of cryptocurrency, success requires adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just shaping the future - we're writing the playbook."
-                                </blockquote>
-                                <Link href="https://t.me/Markcrimo6" target="_blank" rel="noopener noreferrer">
-                                    <Button>
-                                        <Send className="mr-2 h-4 w-4" />
-                                        Contact on Telegram
-                                    </Button>
-                                </Link>
-                            </div>
-                        </CardContent>
-                    </Card>
-                </div>
+        <section id="team" className="py-20 bg-muted/40">
+          <div className="container mx-auto max-w-6xl space-y-12 text-center">
+            <h2 className="text-center text-3xl font-bold">Meet Our Team</h2>
+            <div className="grid gap-12 md:grid-cols-2">
+              <Card>
+                <CardContent className="flex flex-col items-center gap-6 p-6">
+                  <Avatar className="h-40 w-40">
+                    <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo" data-ai-hint="person" />
+                    <AvatarFallback>MC</AvatarFallback>
+                  </Avatar>
+                  <div className="text-center space-y-3">
+                    <h3 className="text-2xl font-bold">Mark Crimo</h3>
+                    <p className="font-semibold text-primary">The Founder</p>
+                    <div className="inline-block bg-primary/10 text-primary font-bold py-1 px-3 rounded-full">
+                      5 Years of Experience
+                    </div>
+                    <blockquote className="text-muted-foreground italic border-l-4 border-primary/50 pl-4 py-2 text-left">
+                      "In the ever-changing world of cryptocurrency, success requires adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just shaping the future - we're writing the playbook."
+                    </blockquote>
+                    <Link href="https://t.me/Markcrimo6" target="_blank" rel="noopener noreferrer">
+                      <Button>
+                        <Send className="mr-2 h-4 w-4" />
+                        Contact on Telegram
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="flex flex-col items-center gap-6 p-6">
+                  <Avatar className="h-40 w-40">
+                    <AvatarImage src="https://i.postimg.cc/zBKfDBWg/IMG-20250815-230231-790.jpg" alt="Chris Hendrikso" data-ai-hint="person" />
+                    <AvatarFallback>CH</AvatarFallback>
+                  </Avatar>
+                  <div className="text-center space-y-3">
+                    <h3 className="text-2xl font-bold">Chris Hendrikso</h3>
+                    <p className="font-semibold text-primary">Marketing Manager</p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
+          </div>
         </section>
 
         <section id="contact" className="py-20">
@@ -237,5 +247,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
