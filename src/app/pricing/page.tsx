@@ -24,7 +24,9 @@ export default function PricingPage() {
                 <Link href="/">Home</Link>
               </Button>
               <Button variant="ghost">About</Button>
-              <Button variant="ghost">Services</Button>
+              <Button variant="ghost" asChild>
+                <Link href="/services">Services</Link>
+              </Button>
                <Button variant="ghost" asChild>
                 <Link href="/pricing">Pricing</Link>
               </Button>

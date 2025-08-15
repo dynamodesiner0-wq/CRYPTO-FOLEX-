@@ -3,11 +3,12 @@
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
-import { PlayCircle } from "lucide-react";
+import { Users, FileText, MessagesSquare } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-export default function Home() {
+export default function ServicesPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -36,27 +37,55 @@ export default function Home() {
         </div>
       </header>
       <main className="flex-1">
-        <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
+        <section className="container py-10 md:py-16">
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
-            <div className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium">
-              <span className="mr-2 h-2 w-2 rounded-full bg-primary"></span>
-              Your Premier Web3 Media Powerhouse
-              <span className="ml-2 h-2 w-2 rounded-full bg-primary"></span>
-            </div>
-            <h1 className="text-4xl font-extrabold leading-tight tracking-tighter md:text-6xl">
-              All you need to grow your business, in one place
+            <h1 className="text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl">
+              Our Services
             </h1>
             <p className="max-w-xl text-lg text-muted-foreground">
-              Generate engagement and sales with our expert team, who have
-              worked with the biggest project. Relax, we handle it all for you.
+              We offer a wide range of services to help you grow your business.
             </p>
           </div>
-          <div className="flex justify-center gap-4">
-            <Button size="lg">View Pricing</Button>
-            <Button size="lg" variant="outline">
-              <PlayCircle className="mr-2 h-5 w-5" />
-              Get Started
-            </Button>
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            <Card>
+              <CardHeader className="items-center text-center">
+                <div className="rounded-full bg-primary/10 p-4">
+                  <Users className="h-8 w-8 text-primary" />
+                </div>
+                <CardTitle className="mt-4">Social Media Growth</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground">
+                  We help you grow your social media presence and engage with your audience.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="items-center text-center">
+                <div className="rounded-full bg-primary/10 p-4">
+                  <FileText className="h-8 w-8 text-primary" />
+                </div>
+                <CardTitle className="mt-4">Content Creation</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground">
+                  We create high-quality content that resonates with your audience and drives results.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="items-center text-center">
+                <div className="rounded-full bg-primary/10 p-4">
+                  <MessagesSquare className="h-8 w-8 text-primary" />
+                </div>
+                <CardTitle className="mt-4">Community Management</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground">
+                  We build and manage a strong community around your brand.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </section>
       </main>
