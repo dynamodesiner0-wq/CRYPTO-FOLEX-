@@ -378,7 +378,7 @@ function LandingPageContent() {
             <h2 className="text-center text-3xl font-bold">PREVIOUS AMA BANNERS</h2>
             <p className="text-center text-muted-foreground mt-2 mb-10">Check out some of our previous AMA banners.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-              {amaBanners.map((banner, index) => (
+              {amaBanners.map((banner) => (
                 <div key={banner.src} className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   <Image
                     src={banner.src}
@@ -503,3 +503,5 @@ export default function Page() {
 
   return isClient ? <LandingPageContent /> : null;
 }
+
+    
