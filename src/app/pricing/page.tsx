@@ -143,7 +143,7 @@ function PricingPageContent() {
                 Choose the perfect plan for your project's needs. We offer a range of services to help you connect with your community.
               </p>
             </div>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <Card className="flex flex-col col-span-1">
                 <CardHeader className="items-center">
                    <p className="text-sm font-semibold text-muted-foreground uppercase">Telegram</p>
