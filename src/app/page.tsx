@@ -117,8 +117,8 @@ function LandingPageContent() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div className="text-center md:text-left">
                   <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-fade-in">
-                    <span className="block">Your Premier</span>
-                    <span className="block text-primary">Web3 Media Powerhouse</span>
+                    <span className="block">All you need to grow your</span>
+                    <span className="block text-primary">business, in one place</span>
                   </h1>
                   <p className="mt-6 max-w-2xl mx-auto md:mx-0 text-lg text-muted-foreground md:text-xl animate-fade-in animation-delay-300">
                     From community engagement to strategic partnerships, we provide the fuel for your project's journey to the moon. Relax, we handle it all.
