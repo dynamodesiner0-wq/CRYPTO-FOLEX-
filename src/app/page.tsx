@@ -162,16 +162,13 @@ function LandingPageContent() {
         
         <section id="about" className="py-20 lg:py-32">
           <div className="container">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <Image src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="About Crypto Folex" width={800} height={800} className="rounded-lg shadow-2xl" data-ai-hint="team collaboration" />
-                </div>
-                <div className="space-y-6">
+            <div className="grid items-center">
+                <div className="space-y-6 text-center">
                     <div className="inline-block bg-primary/10 text-primary font-semibold py-1 px-3 rounded-full text-sm">
                       About Crypto Folex
                     </div>
                     <h2 className="text-3xl lg:text-4xl font-bold">The Driving Force Behind Web3 Success</h2>
-                     <p className="text-lg text-muted-foreground">
+                     <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                         At CRYPTO FOLEX, we're more than just a marketing agency—we're a community of passionate individuals dedicated to shaping the future of decentralized finance. From facilitating AMA sessions to forging strategic partnerships, we're committed to amplifying your project's visibility and success.
                     </p>
                 </div>
