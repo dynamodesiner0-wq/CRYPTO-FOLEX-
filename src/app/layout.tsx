@@ -15,7 +15,7 @@ const fontCode = Source_Code_Pro({
 });
 
 export const metadata: Metadata = {
-  title: 'CRYPTO FOLEX',
+  title: 'CRYPTO FOLEX - Your Premier Web3 Media Powerhouse',
   description: 'Your Premier Web3 Media Powerhouse',
 };
 
