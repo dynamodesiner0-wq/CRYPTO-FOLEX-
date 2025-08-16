@@ -91,6 +91,7 @@ function LandingPageContent() {
               </SheetTrigger>
               <SheetContent side="right" className="w-full max-w-sm bg-background p-6">
                 <SheetHeader>
+                   <SheetTitle className="sr-only">Menu</SheetTitle>
                    <Link href="/" className="flex items-center gap-2 font-bold text-lg mb-4">
                        <Image src="https://i.postimg.cc/Nj9QDFMr/IMG-20250815-212508-948.jpg" alt="CRYPTO FOLEX Logo" width={32} height={32} className="h-8 w-8 rounded-full" />
                        <span>CRYPTO FOLEX</span>
@@ -261,10 +262,11 @@ function LandingPageContent() {
                   <div className="text-center">
                     <h3 className="text-xl font-bold">Mark Crimo</h3>
                     <p className="font-semibold text-primary">Founder & CEO</p>
-                    <Link href="https://t.me/MarkCrimo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-2 text-muted-foreground hover:text-primary">
-                      <Send className="h-4 w-4" />
-                      <span>@MarkCrimo</span>
-                    </Link>
+                    <div className="flex items-center justify-center mt-2">
+                       <Link href="https://t.me/MarkCrimo" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                         <Send className="h-5 w-5" />
+                       </Link>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
