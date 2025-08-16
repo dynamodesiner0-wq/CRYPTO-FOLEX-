@@ -113,22 +113,27 @@ function LandingPageContent() {
         <section className="relative py-32 md:py-48 lg:py-60 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-background to-transparent z-0"></div>
           <div className="absolute inset-0 bg-[url(https://www.toptal.com/designers/subtlepatterns/uploads/double-bubble-outline.png)] opacity-10"></div>
-          <div className="container relative z-10 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-fade-in">
-                <span className="block">Your Premier</span>
-                <span className="block text-primary">Web3 Media Powerhouse</span>
-              </h1>
-              <p className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground md:text-xl animate-fade-in animation-delay-300">
-                From community engagement to strategic partnerships, we provide the fuel for your project's journey to the moon. Relax, we handle it all.
-              </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in animation-delay-500">
-                <Button size="lg" asChild>
-                    <Link href="/pricing">View Pricing</Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                    <Link href="/#contact">Book a Consultation</Link>
-                </Button>
+          <div className="container relative z-10">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="text-center md:text-left">
+                  <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-fade-in">
+                    <span className="block">Your Premier</span>
+                    <span className="block text-primary">Web3 Media Powerhouse</span>
+                  </h1>
+                  <p className="mt-6 max-w-2xl mx-auto md:mx-0 text-lg text-muted-foreground md:text-xl animate-fade-in animation-delay-300">
+                    From community engagement to strategic partnerships, we provide the fuel for your project's journey to the moon. Relax, we handle it all.
+                  </p>
+                  <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in animation-delay-500">
+                    <Button size="lg" asChild>
+                        <Link href="/pricing">View Pricing</Link>
+                    </Button>
+                    <Button size="lg" variant="outline" asChild>
+                        <Link href="/#contact">Book a Consultation</Link>
+                    </Button>
+                  </div>
+              </div>
+              <div className="hidden md:flex justify-center animate-fade-in animation-delay-700">
+                <Image src="https://placehold.co/500x500.png" alt="Hero Image" width={500} height={500} className="rounded-full shadow-2xl" data-ai-hint="woman tech" />
               </div>
             </div>
           </div>
@@ -138,14 +143,14 @@ function LandingPageContent() {
           <div className="container">
             <div className="bg-secondary rounded-lg p-8 md:p-12 shadow-lg">
                 <div className="grid md:grid-cols-3 gap-8 items-center">
-                    <div className="flex justify-center md:justify-start animate-slide-in-up">
+                    <div className="flex justify-center md:justify-start">
                         <Avatar className="h-40 w-40 border-4 border-primary">
                             <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo, Founder" />
                             <AvatarFallback>MC</AvatarFallback>
                         </Avatar>
                     </div>
-                    <div className="md:col-span-2 text-center md:text-left space-y-4 animate-slide-in-up animation-delay-200">
-                        <h3 className="text-3xl font-bold">Mark Crimo, Founder of (CRYPTO FOLEX 5 star Agency)</h3>
+                    <div className="md:col-span-2 text-center md:text-left space-y-4">
+                        <h3 className="text-3xl font-bold">Mark Crimo, Founder of CRYPTO FOLEX 5 star Agency</h3>
                         <blockquote className="text-lg text-muted-foreground italic border-l-4 border-primary pl-6">
                            "In the ever-changing world of cryptocurrency, success requires adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just shaping the future - we're writing the playbook."
                         </blockquote>
@@ -158,10 +163,10 @@ function LandingPageContent() {
         <section id="about" className="py-20 lg:py-32">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-16 items-center">
-                <div className="animate-slide-in-up">
+                <div>
                     <Image src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="About Crypto Folex" width={800} height={800} className="rounded-lg shadow-2xl" data-ai-hint="team collaboration" />
                 </div>
-                <div className="space-y-6 animate-slide-in-up animation-delay-200">
+                <div className="space-y-6">
                     <div className="inline-block bg-primary/10 text-primary font-semibold py-1 px-3 rounded-full text-sm">
                       About Crypto Folex
                     </div>
@@ -184,7 +189,7 @@ function LandingPageContent() {
             </div>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {services.map((service, i) => (
-                  <Card key={service.title} className="bg-background border-2 border-transparent hover:border-primary transition-all duration-300 group animate-slide-in-up" style={{animationDelay: `${i * 150}ms`}}>
+                  <Card key={service.title} className="bg-background border-2 border-transparent hover:border-primary transition-all duration-300 group">
                     <CardHeader>
                       <CardTitle className="text-xl group-hover:text-primary transition-colors">{service.title}</CardTitle>
                     </CardHeader>
@@ -210,13 +215,13 @@ function LandingPageContent() {
             </div>
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-10">
-                    <div className="animate-slide-in-up">
+                    <div>
                       <h3 className="text-2xl font-semibold text-primary">What is an AMA?</h3>
                       <p className="mt-2 text-muted-foreground text-lg">
                         An AMA (Ask Me Anything) is a live session where you present your project, address community questions, and share your vision to build trust and drive engagement.
                       </p>
                     </div>
-                     <div className="animate-slide-in-up animation-delay-200">
+                     <div>
                       <h3 className="text-2xl font-semibold text-primary">AMA Formats</h3>
                       <ul className="mt-4 space-y-3 text-muted-foreground text-lg">
                         <li className="flex items-center gap-3"><Twitter className="h-5 w-5 text-primary"/>X (Twitter) Space Voice AMA</li>
@@ -225,7 +230,7 @@ function LandingPageContent() {
                       </ul>
                     </div>
                 </div>
-                 <div className="animate-slide-in-up animation-delay-400">
+                 <div>
                     <Card className="p-8 bg-secondary shadow-lg">
                       <h3 className="text-2xl font-semibold">Why Choose Us?</h3>
                       <p className="mt-4 text-muted-foreground text-lg">
@@ -249,7 +254,7 @@ function LandingPageContent() {
               </p>
             </div>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <Card className="bg-background animate-slide-in-up">
+              <Card className="bg-background">
                 <CardContent className="flex flex-col items-center gap-4 p-6 pt-8">
                   <Avatar className="h-28 w-28 border-4 border-primary">
                     <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo" />
@@ -261,7 +266,7 @@ function LandingPageContent() {
                   </div>
                 </CardContent>
               </Card>
-              <Card className="bg-background animate-slide-in-up animation-delay-200">
+              <Card className="bg-background">
                 <CardContent className="flex flex-col items-center gap-4 p-6 pt-8">
                   <Avatar className="h-28 w-28 border-4 border-primary">
                     <AvatarImage src="https://i.postimg.cc/26b01p8v/IMG-20250815-231059-726.jpg" alt="Mikey Marco" />
@@ -273,7 +278,7 @@ function LandingPageContent() {
                   </div>
                 </CardContent>
               </Card>
-              <Card className="bg-background animate-slide-in-up animation-delay-400">
+              <Card className="bg-background">
                 <CardContent className="flex flex-col items-center gap-4 p-6 pt-8">
                   <Avatar className="h-28 w-28 border-4 border-primary">
                     <AvatarImage src="https://i.postimg.cc/zBKfDBWg/IMG-20250815-230231-790.jpg" alt="Chris Hendrikso" />
@@ -285,7 +290,7 @@ function LandingPageContent() {
                   </div>
                 </CardContent>
               </Card>
-              <Card className="bg-background animate-slide-in-up">
+              <Card className="bg-background">
                 <CardContent className="flex flex-col items-center gap-4 p-6 pt-8">
                   <Avatar className="h-28 w-28 border-4 border-primary">
                     <AvatarImage src="https://i.postimg.cc/bYb92987/IMG-20250815-233551-808.jpg" alt="Rupok" />
@@ -297,7 +302,7 @@ function LandingPageContent() {
                   </div>
                 </CardContent>
               </Card>
-               <Card className="bg-background animate-slide-in-up animation-delay-200">
+               <Card className="bg-background">
                 <CardContent className="flex flex-col items-center gap-4 p-6 pt-8">
                   <Avatar className="h-28 w-28 border-4 border-primary">
                     <AvatarImage src="https://i.postimg.cc/rFXghYQy/IMG-20250815-233546-893.jpg" alt="Homo sapiens" />
@@ -309,7 +314,7 @@ function LandingPageContent() {
                   </div>
                 </CardContent>
               </Card>
-               <Card className="bg-background animate-slide-in-up animation-delay-400">
+               <Card className="bg-background">
                 <CardContent className="flex flex-col items-center gap-4 p-6 pt-8">
                   <Avatar className="h-28 w-28 border-4 border-primary">
                     <AvatarImage src="https://i.postimg.cc/pLj3P7Cv/IMG-20250816-092829-742.jpg" alt="Martijn" />
@@ -332,7 +337,7 @@ function LandingPageContent() {
               <p className="text-center text-muted-foreground mt-4 text-lg max-w-2xl mx-auto">Real stories from our satisfied partners who have achieved exceptional results with our strategic guidance.</p>
              </div>
             <div className="grid gap-8 md:grid-cols-2">
-              <Card className="bg-secondary animate-slide-in-up p-6">
+              <Card className="bg-secondary p-6">
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-0.5 mb-4">
                       <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
@@ -354,7 +359,7 @@ function LandingPageContent() {
                   </div>
                 </CardContent>
               </Card>
-              <Card className="bg-secondary animate-slide-in-up animation-delay-200 p-6">
+              <Card className="bg-secondary p-6">
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-0.5 mb-4">
                       <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
@@ -386,7 +391,7 @@ function LandingPageContent() {
             <p className="text-center text-muted-foreground mt-2 mb-12 max-w-2xl mx-auto text-lg">
               We are proud to collaborate with leading projects and exchanges in the crypto space.
             </p>
-            <div className="relative animate-slide-in-up">
+            <div className="relative">
               <div className="flex justify-center items-center">
                  <Image
                     src="https://i.postimg.cc/VsZ5mdJd/IMG-20250816-000252-563.png"
@@ -403,7 +408,7 @@ function LandingPageContent() {
         <section id="contact" className="py-20 lg:py-32">
           <div className="container">
             <div className="grid gap-12 md:grid-cols-2 items-center">
-              <div className="space-y-6 animate-slide-in-up">
+              <div className="space-y-6">
                 <h2 className="text-3xl lg:text-4xl font-bold">Ready to Elevate Your Project?</h2>
                 <p className="text-muted-foreground text-lg">
                   Let's talk. Fill out the form and our team will get back to you shortly to discuss how we can achieve your goals.
@@ -423,7 +428,7 @@ function LandingPageContent() {
                   </div>
                 </div>
               </div>
-              <Card className="animate-slide-in-up animation-delay-200 bg-secondary">
+              <Card className="bg-secondary">
                 <CardHeader>
                     <CardTitle className="text-2xl">Get in Touch</CardTitle>
                     <CardDescription>We're excited to hear about your project.</CardDescription>
