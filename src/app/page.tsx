@@ -63,9 +63,8 @@ function LandingPageContent() {
   ];
 
   const footerResources = [
-      { href: "#", label: "Blog" },
-      { href: "#", label: "Whitepaper" },
-      { href: "#", label: "Case Studies" },
+      { href: "#", label: "AMA RECAPS" },
+      { href: "#", label: "AMA ANNOUNCEMENT" },
   ];
 
 
