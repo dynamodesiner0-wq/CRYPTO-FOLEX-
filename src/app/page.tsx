@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from "react";
@@ -260,6 +261,10 @@ function LandingPageContent() {
                   <div className="text-center">
                     <h3 className="text-xl font-bold">Mark Crimo</h3>
                     <p className="font-semibold text-primary">Founder & CEO</p>
+                    <Link href="https://t.me/MarkCrimo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-2 text-muted-foreground hover:text-primary">
+                      <Send className="h-4 w-4" />
+                      <span>@MarkCrimo</span>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
