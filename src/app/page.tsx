@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Twitter, Check, Star, Send, Briefcase, Menu, Users, RadioTower, Link as LinkIcon } from "lucide-react";
+import { Twitter, Check, Star, Send, Briefcase, Menu, Users, RadioTower, Link as LinkIcon, MessageSquare, Mic, Video } from "lucide-react";
 import Image from "next/image";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 
@@ -29,6 +29,7 @@ function LandingPageContent() {
     { href: "#ama-banners", label: "AMA Banners" },
     { href: "#community", label: "Community" },
     { href: "#partners", label: "Our Partners" },
+    { href: "#pricing", label: "Pricing" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -457,6 +458,117 @@ function LandingPageContent() {
           </div>
         </section>
         
+        <section id="pricing" className="py-20">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold">Pricing Plans</h2>
+              <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+                Choose the perfect plan for your project's needs. We offer a range of services to help you connect with your community.
+              </p>
+            </div>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+              <Card className="flex flex-col">
+                <CardHeader className="items-center">
+                  <p className="text-sm font-semibold text-muted-foreground">TELEGRAM</p>
+                  <div className="bg-primary/10 rounded-full p-3 my-2">
+                     <MessageSquare className="h-8 w-8 text-primary"/>
+                  </div>
+                  <CardTitle>Text AMA</CardTitle>
+                  <CardDescription className="text-center">Share your project features and potentials to maximum attendees.</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col justify-between">
+                  <div>
+                    <p className="text-4xl font-bold text-center my-4">$250</p>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>Talk with community using text message</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>Up to 5,000 attendees</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>40 min to 1 hour session</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>AMA Recap</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>Blockchain Express Full support</span></li>
+                    </ul>
+                  </div>
+                  <Button className="w-full mt-6">Get Started</Button>
+                </CardContent>
+              </Card>
+
+              <Card className="flex flex-col">
+                <CardHeader className="items-center">
+                   <p className="text-sm font-semibold text-muted-foreground">TELEGRAM / X</p>
+                   <div className="bg-primary/10 rounded-full p-3 my-2">
+                      <Mic className="h-8 w-8 text-primary"/>
+                   </div>
+                  <CardTitle>Voice / Space AMA</CardTitle>
+                  <CardDescription className="text-center">Share your project features and potentials to maximum attendees.</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col justify-between">
+                  <div>
+                    <p className="text-4xl font-bold text-center my-4">$350</p>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>Talk with community using voice message</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>Up to 15,000 attendees</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>40 min to 1 hour session</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>AMA Recap</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>Blockchain Express Full support</span></li>
+                    </ul>
+                  </div>
+                  <Button className="w-full mt-6">Get Started</Button>
+                </CardContent>
+              </Card>
+
+              <Card className="flex flex-col">
+                <CardHeader className="items-center">
+                  <p className="text-sm font-semibold text-muted-foreground">BINANCE</p>
+                  <div className="bg-primary/10 rounded-full p-3 my-2">
+                     <Video className="h-8 w-8 text-primary"/>
+                  </div>
+                  <CardTitle>Voice / Video AMA</CardTitle>
+                  <CardDescription className="text-center">Best way to communicate with individuals in Binance.</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col justify-between">
+                  <div>
+                    <p className="text-4xl font-bold text-center my-4">$450</p>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>Talk with community using voice or video chat in Binance</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>Up to 30000+ Attendees at a time</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>1 Hour Session</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>Professional Host</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>AMA Recap</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>Blockchain Express Full support</span></li>
+                    </ul>
+                  </div>
+                  <Button className="w-full mt-6">Get Started</Button>
+                </CardContent>
+              </Card>
+              
+              <Card className="flex flex-col">
+                <CardHeader className="items-center">
+                  <p className="text-sm font-semibold text-muted-foreground">BINANCE & X</p>
+                  <div className="bg-primary/10 rounded-full p-3 my-2">
+                     <Video className="h-8 w-8 text-primary"/>
+                  </div>
+                  <CardTitle>Simultaneously Binance & X live AMA</CardTitle>
+                  <CardDescription className="text-center">Best way to communicate with individuals in Binance and X.</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col justify-between">
+                  <div>
+                    <p className="text-4xl font-bold text-center my-4">$600</p>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>Talk with community using voice or video chat in binance & X</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>Up to 50000+ Attendees at a time</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>1 Hour Session</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>Post AMA News Sharing</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>AMA Recap</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>High support</span></li>
+                      <li className="flex items-center gap-2"><Check className="h-5 w-5 text-green-500" /><span>Blockchain Express Full support</span></li>
+                    </ul>
+                  </div>
+                  <Button className="w-full mt-6">Get Started</Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         <section id="contact" className="py-20">
           <div className="container">
             <div className="grid gap-10 md:grid-cols-2">
