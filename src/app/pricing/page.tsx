@@ -59,7 +59,7 @@ function PricingPageContent() {
   ];
 
   const footerResources = [
-      { href: "#", label: "AMA RECAPS" },
+      { href: "https://www.binance.com/live/video?roomId=2266094", label: "AMA RECAPS" },
       { href: "#", label: "AMA ANNOUNCEMENT" },
   ];
 
@@ -329,7 +329,7 @@ function PricingPageContent() {
                     <ul className="space-y-2">
                          {footerResources.map((link) => (
                             <li key={link.label}>
-                                <Link href={link.href} className="text-muted-foreground hover:text-foreground">{link.label}</Link>
+                                <Link href={link.href} className="text-muted-foreground hover:text-foreground" target={link.href.startsWith('http') ? '_blank' : undefined} rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}>{link.label}</Link>
                             </li>
                         ))}
                     </ul>
