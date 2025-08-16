@@ -260,7 +260,7 @@ function LandingPageContent() {
         <section id="team" className="py-20">
           <div className="container mx-auto max-w-6xl space-y-12 text-center">
             <h2 className="text-center text-3xl font-bold">Meet Our Team</h2>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <Card>
                 <CardContent className="flex flex-col items-center gap-6 p-6">
                   <Avatar className="h-40 w-40">
@@ -331,6 +331,18 @@ function LandingPageContent() {
                   <div className="text-center space-y-3">
                     <h3 className="text-2xl font-bold">Homo sapiens</h3>
                     <p className="font-semibold text-primary">Host</p>
+                  </div>
+                </CardContent>
+              </Card>
+               <Card>
+                <CardContent className="flex flex-col items-center gap-6 p-6">
+                  <Avatar className="h-40 w-40">
+                    <AvatarImage src="https://i.postimg.cc/pLj3P7Cv/IMG-20250816-092829-742.jpg" alt="Martijn" data-ai-hint="person" />
+                    <AvatarFallback>M</AvatarFallback>
+                  </Avatar>
+                  <div className="text-center space-y-3">
+                    <h3 className="text-2xl font-bold">Martijn</h3>
+                    <p className="font-semibold text-primary">Marketing Team</p>
                   </div>
                 </CardContent>
               </Card>
