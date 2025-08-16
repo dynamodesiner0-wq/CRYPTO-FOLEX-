@@ -178,10 +178,10 @@ function LandingPageContent() {
                 <div className="inline-block bg-primary/10 text-primary font-bold py-1 px-3 rounded-full">
                   5 Years of Experience
                 </div>
+                <p className="font-bold text-xl">Mark Crimo, Founder of (CRYPTO FOLEX 5 star Agency)</p>
                 <blockquote className="text-lg font-medium text-muted-foreground italic border-l-4 border-primary/50 pl-4 py-2">
                   "In the ever-changing world of cryptocurrency, success requires adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just shaping the future - we're writing the playbook."
                 </blockquote>
-                 <p className="font-bold text-lg">Mark Crimo, Founder of (CRYPTO FOLEX 5 star Agency)</p>
               </div>
             </div>
           </div>
