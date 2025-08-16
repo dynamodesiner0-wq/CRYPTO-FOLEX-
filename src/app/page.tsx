@@ -166,22 +166,19 @@ function LandingPageContent() {
         </section>
 
         <section className="py-16">
-          <div className="container">
-            <div className="grid md:grid-cols-3 gap-8 items-center">
-              <div className="flex justify-center md:col-span-1">
-                <Avatar className="h-48 w-48">
-                  <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo" data-ai-hint="person" />
-                  <AvatarFallback>MC</AvatarFallback>
-                </Avatar>
-              </div>
-              <div className="md:col-span-2 space-y-4">
-                <div className="inline-block bg-primary/10 text-primary font-bold py-1 px-3 rounded-full">
-                  5 Years of Experience
-                </div>
-                <p className="font-bold text-xl">Mark Crimo, Founder of (CRYPTO FOLEX 5 star Agency)</p>
-                <blockquote className="text-lg font-medium text-muted-foreground italic border-l-4 border-primary/50 pl-4 py-2">
-                  "In the ever-changing world of cryptocurrency, success requires adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just shaping the future - we're writing the playbook."
-                </blockquote>
+          <div className="container max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">5 Years of Experience</h2>
+            <blockquote className="text-lg text-muted-foreground mb-8">
+              "In the ever-changing world of cryptocurrency, success requires adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just shaping the future - we're writing the playbook."
+            </blockquote>
+            <div className="flex items-center justify-center gap-4">
+              <Avatar className="h-20 w-20">
+                <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo" data-ai-hint="person" />
+                <AvatarFallback>MC</AvatarFallback>
+              </Avatar>
+              <div>
+                <h3 className="text-xl font-bold">Mark Crimo</h3>
+                <p className="text-muted-foreground">Founder of (CRYPTO FOLEX - 5 star Agency)</p>
               </div>
             </div>
           </div>
@@ -581,3 +578,5 @@ export default function Page() {
 
   return isClient ? <LandingPageContent /> : null;
 }
+
+    
