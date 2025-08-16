@@ -166,20 +166,23 @@ function LandingPageContent() {
         </section>
 
         <section className="py-16 animate-fade-in">
-          <div className="container max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">5 Years of Experience</h2>
-            <blockquote className="text-lg text-muted-foreground mb-8">
-              "In the ever-changing world of cryptocurrency, success requires adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just shaping the future - we're writing the playbook."
-            </blockquote>
-            <div className="flex items-center justify-center gap-4">
-              <Avatar className="h-20 w-20">
-                <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo" data-ai-hint="person" />
-                <AvatarFallback>MC</AvatarFallback>
-              </Avatar>
-              <div>
-                <h3 className="text-xl font-bold">Mark Crimo</h3>
-                <p className="text-muted-foreground">Founder of (CRYPTO FOLEX - 5 star Agency)</p>
-              </div>
+          <div className="container max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 items-center">
+                <div className="md:col-span-1 flex justify-center">
+                    <Avatar className="h-40 w-40 border-4 border-primary/20">
+                        <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo" data-ai-hint="person" />
+                        <AvatarFallback>MC</AvatarFallback>
+                    </Avatar>
+                </div>
+                <div className="md:col-span-2 space-y-4 text-center md:text-left">
+                    <div className="inline-block bg-primary/10 text-primary font-bold py-1 px-3 rounded-full text-sm">
+                      5 Years of Experience
+                    </div>
+                    <h3 className="text-2xl font-bold">Mark Crimo, Founder of (CRYPTO FOLEX 5 star Agency)</h3>
+                    <blockquote className="text-lg text-muted-foreground italic border-l-4 border-primary/50 pl-4 py-2">
+                        "In the ever-changing world of cryptocurrency, success requires adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just shaping the future - we're writing the playbook."
+                    </blockquote>
+                </div>
             </div>
           </div>
         </section>
@@ -473,9 +476,12 @@ function LandingPageContent() {
           </div>
         </section>
 
-        <section id="partners" className="py-20 bg-muted/40 animate-fade-in">
+        <section id="partners" className="py-20 bg-background animate-fade-in">
           <div className="container">
-            
+            <h2 className="text-center text-3xl font-bold">Our Partners</h2>
+            <p className="text-center text-muted-foreground mt-2 mb-10">
+              We are proud to collaborate with leading projects in the crypto space.
+            </p>
             <div className="flex justify-center mt-10">
               <Image
                 src="https://i.postimg.cc/VsZ5mdJd/IMG-20250816-000252-563.png"
@@ -489,7 +495,7 @@ function LandingPageContent() {
           </div>
         </section>
         
-        <section id="contact" className="py-20 animate-fade-in">
+        <section id="contact" className="py-20 animate-fade-in bg-muted/40">
           <div className="container">
             <div className="grid gap-10 md:grid-cols-2">
               <div>
@@ -578,3 +584,5 @@ export default function Page() {
 
   return isClient ? <LandingPageContent /> : null;
 }
+
+    
