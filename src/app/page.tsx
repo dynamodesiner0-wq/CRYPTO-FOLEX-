@@ -30,14 +30,14 @@ function LandingPageContent() {
     { href: "/pricing", label: "Pricing" },
     { href: "#contact", label: "Contact" },
   ];
-  
+
   const services = [
-      { title: "Community Promotion", description: "Expand your reach and engage with a thriving community of crypto enthusiasts." },
-      { title: "Web Development", description: "Create a stunning and functional website that showcases your project's potential." },
-      { title: "Search Engine Optimization", description: "Improve your search engine rankings and attract organic traffic to your platform." },
-      { title: "Content Writing", description: "Craft compelling narratives and educational content to build your brand's authority." },
-      { title: "Graphics Designing", description: "Develop a strong visual identity with professional graphics and marketing materials." },
-      { title: "Strategic Partnerships", description: "Forge valuable connections and collaborations to accelerate your growth." },
+      { title: "Community Promotion", description: "Expand your reach and engage with a thriving community of crypto enthusiasts.", icon: Users },
+      { title: "Web Development", description: "Create a stunning and functional website that showcases your project's potential.", icon: LinkIcon },
+      { title: "Search Engine Optimization", description: "Improve your search engine rankings and attract organic traffic to your platform.", icon: RadioTower },
+      { title: "Content Writing", description: "Craft compelling narratives and educational content to build your brand's authority.", icon: MessageSquare },
+      { title: "Graphics Designing", description: "Develop a strong visual identity with professional graphics and marketing materials.", icon: Mic },
+      { title: "Strategic Partnerships", description: "Forge valuable connections and collaborations to accelerate your growth.", icon: Briefcase },
   ]
 
   const footerSocials = [
@@ -60,7 +60,6 @@ function LandingPageContent() {
       { href: "#", label: "Announcements" },
   ];
 
-
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${scrolled ? 'bg-background/80 border-b border-border/40 backdrop-blur-sm' : 'bg-transparent'}`}>
@@ -77,7 +76,7 @@ function LandingPageContent() {
             ))}
           </nav>
           <div className="flex flex-1 items-center justify-end gap-4 md:ml-8">
-            <Button asChild variant="outline" className="hidden md:flex">
+            <Button asChild className="hidden md:flex">
                 <Link href="/#contact">
                     Get a Quote <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -135,11 +134,32 @@ function LandingPageContent() {
           </div>
         </section>
 
+        <section id="founder" className="py-20 lg:py-24">
+          <div className="container">
+            <div className="bg-secondary rounded-lg p-8 md:p-12 shadow-lg">
+                <div className="grid md:grid-cols-3 gap-8 items-center">
+                    <div className="flex justify-center md:justify-start animate-slide-in-up">
+                        <Avatar className="h-40 w-40 border-4 border-primary">
+                            <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo, Founder" />
+                            <AvatarFallback>MC</AvatarFallback>
+                        </Avatar>
+                    </div>
+                    <div className="md:col-span-2 text-center md:text-left space-y-4 animate-slide-in-up animation-delay-200">
+                        <h3 className="text-3xl font-bold">Mark Crimo, Founder of (CRYPTO FOLEX 5 star Agency)</h3>
+                        <blockquote className="text-lg text-muted-foreground italic border-l-4 border-primary pl-6">
+                           "In the ever-changing world of cryptocurrency, success requires adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just shaping the future - we're writing the playbook."
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+        
         <section id="about" className="py-20 lg:py-32">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-16 items-center">
                 <div className="animate-slide-in-up">
-                    <Image src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo, Founder" width={800} height={800} className="rounded-lg shadow-2xl" data-ai-hint="person working" />
+                    <Image src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="About Crypto Folex" width={800} height={800} className="rounded-lg shadow-2xl" data-ai-hint="team collaboration" />
                 </div>
                 <div className="space-y-6 animate-slide-in-up animation-delay-200">
                     <div className="inline-block bg-primary/10 text-primary font-semibold py-1 px-3 rounded-full text-sm">
@@ -149,10 +169,6 @@ function LandingPageContent() {
                      <p className="text-lg text-muted-foreground">
                         At CRYPTO FOLEX, we're more than just a marketing agency—we're a community of passionate individuals dedicated to shaping the future of decentralized finance. From facilitating AMA sessions to forging strategic partnerships, we're committed to amplifying your project's visibility and success.
                     </p>
-                    <blockquote className="text-lg text-muted-foreground border-l-4 border-primary pl-6 italic">
-                        "In the ever-changing world of cryptocurrency, success requires adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just shaping the future - we're writing the playbook."
-                        <footer className="mt-2 text-sm not-italic font-semibold text-foreground">Mark Crimo, Founder</footer>
-                    </blockquote>
                 </div>
             </div>
           </div>
@@ -236,7 +252,7 @@ function LandingPageContent() {
               <Card className="bg-background animate-slide-in-up">
                 <CardContent className="flex flex-col items-center gap-4 p-6 pt-8">
                   <Avatar className="h-28 w-28 border-4 border-primary">
-                    <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo" data-ai-hint="person" />
+                    <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo" />
                     <AvatarFallback>MC</AvatarFallback>
                   </Avatar>
                   <div className="text-center">
@@ -248,7 +264,7 @@ function LandingPageContent() {
               <Card className="bg-background animate-slide-in-up animation-delay-200">
                 <CardContent className="flex flex-col items-center gap-4 p-6 pt-8">
                   <Avatar className="h-28 w-28 border-4 border-primary">
-                    <AvatarImage src="https://i.postimg.cc/26b01p8v/IMG-20250815-231059-726.jpg" alt="Mikey Marco" data-ai-hint="person" />
+                    <AvatarImage src="https://i.postimg.cc/26b01p8v/IMG-20250815-231059-726.jpg" alt="Mikey Marco" />
                     <AvatarFallback>MM</AvatarFallback>
                   </Avatar>
                   <div className="text-center">
@@ -260,7 +276,7 @@ function LandingPageContent() {
               <Card className="bg-background animate-slide-in-up animation-delay-400">
                 <CardContent className="flex flex-col items-center gap-4 p-6 pt-8">
                   <Avatar className="h-28 w-28 border-4 border-primary">
-                    <AvatarImage src="https://i.postimg.cc/zBKfDBWg/IMG-20250815-230231-790.jpg" alt="Chris Hendrikso" data-ai-hint="person" />
+                    <AvatarImage src="https://i.postimg.cc/zBKfDBWg/IMG-20250815-230231-790.jpg" alt="Chris Hendrikso" />
                     <AvatarFallback>CH</AvatarFallback>
                   </Avatar>
                   <div className="text-center">
@@ -272,7 +288,7 @@ function LandingPageContent() {
               <Card className="bg-background animate-slide-in-up">
                 <CardContent className="flex flex-col items-center gap-4 p-6 pt-8">
                   <Avatar className="h-28 w-28 border-4 border-primary">
-                    <AvatarImage src="https://i.postimg.cc/bYb92987/IMG-20250815-233551-808.jpg" alt="Rupok" data-ai-hint="person" />
+                    <AvatarImage src="https://i.postimg.cc/bYb92987/IMG-20250815-233551-808.jpg" alt="Rupok" />
                     <AvatarFallback>R</AvatarFallback>
                   </Avatar>
                   <div className="text-center">
@@ -284,7 +300,7 @@ function LandingPageContent() {
                <Card className="bg-background animate-slide-in-up animation-delay-200">
                 <CardContent className="flex flex-col items-center gap-4 p-6 pt-8">
                   <Avatar className="h-28 w-28 border-4 border-primary">
-                    <AvatarImage src="https://i.postimg.cc/rFXghYQy/IMG-20250815-233546-893.jpg" alt="Homo sapiens" data-ai-hint="person" />
+                    <AvatarImage src="https://i.postimg.cc/rFXghYQy/IMG-20250815-233546-893.jpg" alt="Homo sapiens" />
                     <AvatarFallback>HS</AvatarFallback>
                   </Avatar>
                   <div className="text-center">
@@ -296,7 +312,7 @@ function LandingPageContent() {
                <Card className="bg-background animate-slide-in-up animation-delay-400">
                 <CardContent className="flex flex-col items-center gap-4 p-6 pt-8">
                   <Avatar className="h-28 w-28 border-4 border-primary">
-                    <AvatarImage src="https://i.postimg.cc/pLj3P7Cv/IMG-20250816-092829-742.jpg" alt="Martijn" data-ai-hint="person" />
+                    <AvatarImage src="https://i.postimg.cc/pLj3P7Cv/IMG-20250816-092829-742.jpg" alt="Martijn" />
                     <AvatarFallback>M</AvatarFallback>
                   </Avatar>
                   <div className="text-center">
@@ -328,7 +344,7 @@ function LandingPageContent() {
                   <p className="text-muted-foreground text-lg mb-6">"CRYPTO FOLEX transformed our community engagement. Their strategies are top-notch and delivered measurable results."</p>
                   <div className="flex items-center gap-4">
                     <Avatar className="h-14 w-14">
-                      <AvatarImage src="https://placehold.co/100x100.png" alt="Client 1" data-ai-hint="person"/>
+                      <AvatarImage src="https://placehold.co/100x100.png" alt="Client 1" />
                       <AvatarFallback>AJ</AvatarFallback>
                     </Avatar>
                     <div>
@@ -350,7 +366,7 @@ function LandingPageContent() {
                    <p className="text-muted-foreground text-lg mb-6">"The best in the business for crypto marketing. Their team is knowledgeable, responsive, and dedicated to our success."</p>
                   <div className="flex items-start gap-4">
                     <Avatar className="h-14 w-14">
-                      <AvatarImage src="https://placehold.co/100x100.png" alt="Client 2" data-ai-hint="person"/>
+                      <AvatarImage src="https://placehold.co/100x100.png" alt="Client 2" />
                       <AvatarFallback>SL</AvatarFallback>
                     </Avatar>
                     <div>
@@ -378,7 +394,6 @@ function LandingPageContent() {
                     width={1000}
                     height={500}
                     className="rounded-lg"
-                    data-ai-hint="partner logos"
                  />
               </div>
             </div>
@@ -486,3 +501,5 @@ export default function Page() {
 
   return isClient ? <LandingPageContent /> : null;
 }
+
+    
