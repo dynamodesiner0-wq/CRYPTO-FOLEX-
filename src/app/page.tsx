@@ -141,16 +141,16 @@ function LandingPageContent() {
         </div>
       </header>
       <main className="flex-1">
-        <section className="py-20">
+        <section className="py-20 animate-fade-in">
           <div className="container grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-4 text-center md:text-left">
-              <h1 className="text-4xl font-extrabold tracking-tighter md:text-6xl">
+              <h1 className="text-4xl font-extrabold tracking-tighter md:text-6xl animate-slide-in-up animation-delay-300">
                 All you need to grow your business, In one place
               </h1>
-              <p className="mx-auto max-w-xl text-lg text-muted-foreground md:mx-0">
+              <p className="mx-auto max-w-xl text-lg text-muted-foreground md:mx-0 animate-slide-in-up animation-delay-500">
                 Generate engagement and sales with our expert team, who have worked with the biggest projects. Relax, we handle it all for you.
               </p>
-              <Button size="lg" className="mt-6">Get Started</Button>
+              <Button size="lg" className="mt-6 animate-slide-in-up animation-delay-700">Get Started</Button>
             </div>
             <div className="flex justify-center">
               <Image 
@@ -158,14 +158,14 @@ function LandingPageContent() {
                 alt="Web3 Media Powerhouse" 
                 width={500} 
                 height={500} 
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-xl animate-fade-in animation-delay-1000"
                 data-ai-hint="abstract illustration"
               />
             </div>
           </div>
         </section>
 
-        <section className="py-16">
+        <section className="py-16 animate-fade-in">
           <div className="container max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">5 Years of Experience</h2>
             <blockquote className="text-lg text-muted-foreground mb-8">
@@ -184,7 +184,7 @@ function LandingPageContent() {
           </div>
         </section>
 
-        <section id="about" className="py-20 bg-muted/40">
+        <section id="about" className="py-20 bg-muted/40 animate-fade-in">
           <div className="container">
             <div className="text-center">
               <h2 className="text-3xl font-bold">About Us</h2>
@@ -196,32 +196,32 @@ function LandingPageContent() {
               </p>
             </div>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-12">
-              <Card>
+              <Card className="animate-slide-in-up">
                 <CardHeader>
                   <CardTitle>Community Promotion</CardTitle>
                 </CardHeader>
               </Card>
-              <Card>
+              <Card className="animate-slide-in-up animation-delay-200">
                 <CardHeader>
                   <CardTitle>Web Development</CardTitle>
                 </CardHeader>
               </Card>
-              <Card>
+              <Card className="animate-slide-in-up animation-delay-400">
                 <CardHeader>
                   <CardTitle>Search Engine Optimization</CardTitle>
                 </CardHeader>
               </Card>
-              <Card>
+              <Card className="animate-slide-in-up">
                 <CardHeader>
                   <CardTitle>Content Writing</CardTitle>
                 </CardHeader>
               </Card>
-              <Card>
+              <Card className="animate-slide-in-up animation-delay-200">
                 <CardHeader>
                   <CardTitle>Graphics Designing</CardTitle>
                 </CardHeader>
               </Card>
-              <Card>
+              <Card className="animate-slide-in-up animation-delay-400">
                 <CardHeader>
                   <CardTitle>Easy &amp; Emergency Solutions Anytime</CardTitle>
                 </CardHeader>
@@ -230,7 +230,7 @@ function LandingPageContent() {
           </div>
         </section>
 
-        <section id="ama-intro" className="py-20">
+        <section id="ama-intro" className="py-20 animate-fade-in">
           <div className="container max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center">Introducing Crypto Folex AMA Sessions</h2>
             <div className="mt-10">
@@ -276,7 +276,7 @@ function LandingPageContent() {
           </div>
         </section>
         
-        <section id="team" className="py-20">
+        <section id="team" className="py-20 animate-fade-in">
           <div className="container mx-auto max-w-6xl space-y-12 text-center">
             <h2 className="text-center text-3xl font-bold">Meet Our Team</h2>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -369,7 +369,7 @@ function LandingPageContent() {
           </div>
         </section>
 
-        <section id="testimonials" className="py-20 bg-muted/40">
+        <section id="testimonials" className="py-20 bg-muted/40 animate-fade-in">
           <div className="container">
              <h2 className="text-center text-3xl font-bold">What Our Clients Say</h2>
              <p className="text-center text-muted-foreground mt-2 mb-10">Real stories from our satisfied partners.</p>
@@ -422,7 +422,7 @@ function LandingPageContent() {
           </div>
         </section>
         
-        <section id="ama-banners" className="py-20">
+        <section id="ama-banners" className="py-20 animate-fade-in">
           <div className="container">
             <h2 className="text-center text-3xl font-bold">PREVIOUS AMA BANNERS</h2>
             <p className="text-center text-muted-foreground mt-2 mb-10">Check out some of our previous AMA banners.</p>
@@ -443,7 +443,7 @@ function LandingPageContent() {
           </div>
         </section>
 
-        <section id="community" className="py-20 bg-muted/40">
+        <section id="community" className="py-20 bg-muted/40 animate-fade-in">
           <div className="container">
             <h2 className="text-center text-3xl font-bold">OUR COMMUNITY</h2>
             <p className="text-center text-muted-foreground mt-2 mb-10">
@@ -473,7 +473,7 @@ function LandingPageContent() {
           </div>
         </section>
 
-        <section id="partners" className="py-20 bg-muted/40">
+        <section id="partners" className="py-20 bg-muted/40 animate-fade-in">
           <div className="container">
             
             <div className="flex justify-center mt-10">
@@ -489,7 +489,7 @@ function LandingPageContent() {
           </div>
         </section>
         
-        <section id="contact" className="py-20">
+        <section id="contact" className="py-20 animate-fade-in">
           <div className="container">
             <div className="grid gap-10 md:grid-cols-2">
               <div>
