@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Twitter, Check, Star, Send, Briefcase, Menu, Users, RadioTower } from "lucide-react";
+import { Twitter, Check, Star, Send, Briefcase, Menu, Users, RadioTower, Link as LinkIcon } from "lucide-react";
 import Image from "next/image";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 
@@ -44,6 +44,30 @@ function LandingPageContent() {
     "https://i.postimg.cc/RZGdG7Pg/IMG-20250816-003038.jpg",
     "https://i.postimg.cc/W1sSMW7D/IMG-20250816-003057.jpg",
   ];
+
+  const footerSocials = [
+      { href: "#", label: "Linktree", icon: <LinkIcon /> },
+      { href: "https://x.com/Folex00", label: "Twitter", icon: <Twitter /> },
+      { href: "https://www.binance.com/en/live/u/72409192", label: "Binance live", icon: <Briefcase /> },
+      { href: "https://t.me/cryptofolex", label: "Telegram chat", icon: <Send /> },
+      { href: "https://t.me/Cryptofolex1", label: "Telegram news", icon: <RadioTower /> },
+  ];
+
+  const footerSitemap = [
+      { href: "#team", label: "Our Team" },
+      { href: "#faq", label: "FAQ" },
+      { href: "#testimonials", label: "Customer Feedback" },
+      { href: "#about", label: "Services" },
+      { href: "#pricing", label: "Pricing" },
+      { href: "#contact", label: "Contact" },
+  ];
+
+  const footerResources = [
+      { href: "#", label: "Blog" },
+      { href: "#", label: "Whitepaper" },
+      { href: "#", label: "Case Studies" },
+  ];
+
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
@@ -467,20 +491,46 @@ function LandingPageContent() {
           </div>
         </section>
       </main>
-      <footer className="bg-primary/5 py-8">
-        <div className="container text-center text-muted-foreground">
-          <div className="mb-4">
-            <p className="text-lg font-semibold">Our all socials :⬇️💖</p>
-          </div>
-          <div className="flex justify-center gap-4 mb-4 flex-wrap">
-            {socialLinks.map((link) => (
-              <Link key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className="hover:text-foreground flex items-center gap-2">
-                {link.icon}
-                <span>{link.label}</span>
-              </Link>
-            ))}
-          </div>
-          <p>&copy; {new Date().getFullYear()} CRYPTO FOLEX. All rights reserved.</p>
+      <footer className="bg-background border-t">
+        <div className="container py-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="space-y-4">
+                    <h4 className="font-semibold text-lg">Social Links</h4>
+                    <ul className="space-y-2">
+                        {footerSocials.map((link) => (
+                            <li key={link.label}>
+                                <Link href={link.href} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground flex items-center gap-2">
+                                    {link.icon}
+                                    {link.label}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div className="space-y-4">
+                    <h4 className="font-semibold text-lg">Sitemap</h4>
+                    <ul className="space-y-2">
+                        {footerSitemap.map((link) => (
+                            <li key={link.label}>
+                                <Link href={link.href} className="text-muted-foreground hover:text-foreground">{link.label}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div className="space-y-4">
+                    <h4 className="font-semibold text-lg">Resources</h4>
+                    <ul className="space-y-2">
+                         {footerResources.map((link) => (
+                            <li key={link.label}>
+                                <Link href={link.href} className="text-muted-foreground hover:text-foreground">{link.label}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+            <div className="mt-8 border-t pt-8 text-center text-muted-foreground">
+                <p>&copy; {new Date().getFullYear()} CRYPTO FOLEX. All rights reserved.</p>
+            </div>
         </div>
       </footer>
     </div>
@@ -497,3 +547,5 @@ export default function Page() {
 
   return isClient ? <LandingPageContent /> : null;
 }
+
+    
