@@ -353,5 +353,3 @@ export default function Page() {
 
   return isClient ? <PricingPageContent /> : null;
 }
-
-    
