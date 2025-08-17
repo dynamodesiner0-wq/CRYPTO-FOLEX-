@@ -134,7 +134,7 @@ function LandingPageContent() {
                     </Button>
                   </div>
               </div>
-              <div className="hidden md:flex justify-center animate-fade-in animation-delay-700">
+              <div className="flex justify-center animate-fade-in animation-delay-700">
                 <Image src="https://i.postimg.cc/jSPQHS8C/image-search-1755280175089.webp" alt="Hero Image" width={500} height={500} className="rounded-full shadow-2xl" data-ai-hint="woman tech" />
               </div>
             </div>
