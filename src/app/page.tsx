@@ -134,7 +134,7 @@ function LandingPageContent() {
                     </Button>
                   </div>
               </div>
-              <div className="flex justify-center animate-fade-in animation-delay-700">
+              <div className="flex justify-center animate-fade-in animation-delay-700 md:flex">
                 <Image src="https://i.postimg.cc/jSPQHS8C/image-search-1755280175089.webp" alt="Hero Image" width={500} height={500} className="rounded-full shadow-2xl" data-ai-hint="woman tech" />
               </div>
             </div>
@@ -263,7 +263,7 @@ function LandingPageContent() {
                     <h3 className="text-xl font-bold">Mark Crimo</h3>
                     <p className="font-semibold text-primary">Founder & CEO</p>
                     <div className="flex items-center justify-center mt-2">
-                       <Link href="https://t.me/MarkCrimo" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                       <Link href="https://t.me/Markcrimo6" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                          <Send className="h-5 w-5" />
                        </Link>
                     </div>
