@@ -391,11 +391,8 @@ function LandingPageContent() {
         
         <section id="partners" className="py-20 bg-secondary">
           <div className="container">
-            <h2 className="text-center text-3xl font-bold">Our Partners</h2>
-            <p className="text-center text-muted-foreground mt-2 mb-12 max-w-2xl mx-auto text-lg">
-              We are proud to collaborate with leading projects and exchanges in the crypto space.
-            </p>
-            <div className="relative">
+            <h2 className="text-center text-3xl font-bold">PREVIOUS AMA BANNERS</h2>
+            <div className="relative mt-12">
               <div className="flex justify-center items-center">
                  <Image
                     src="https://i.postimg.cc/VsZ5mdJd/IMG-20250816-000252-563.png"
