@@ -147,7 +147,7 @@ function LandingPageContent() {
                     </Button>
                   </div>
               </div>
-              <div className="flex justify-center animate-fade-in animation-delay-700">
+              <div className="flex justify-center animate-fade-in animation-delay-700 md:flex">
                 <Image src="https://i.postimg.cc/jSPQHS8C/image-search-1755280175089.webp" alt="Hero Image" width={500} height={500} className="rounded-full shadow-2xl" data-ai-hint="woman tech" />
               </div>
             </div>
@@ -420,13 +420,13 @@ function LandingPageContent() {
                     <CarouselItem key={index}>
                       <div className="p-1">
                         <Card>
-                          <CardContent className="flex aspect-[2/1] items-center justify-center p-0 overflow-hidden rounded-lg">
+                          <CardContent className="flex items-center justify-center p-0 overflow-hidden rounded-lg">
                             <Image
                               src={banner.src}
                               alt={banner.alt}
                               width={1000}
                               height={500}
-                              className="object-cover w-full h-full"
+                              className="object-contain w-full"
                             />
                           </CardContent>
                         </Card>
