@@ -38,7 +38,7 @@ function LandingPageContent() {
       { title: "Search Engine Optimization", description: "Improve your search engine rankings and attract organic traffic to your platform.", icon: RadioTower },
       { title: "Content Writing", description: "Craft compelling narratives and educational content to build your brand's authority.", icon: MessageSquare },
       { title: "Graphics Designing", description: "Develop a strong visual identity with professional graphics and marketing materials.", icon: Mic },
-      { title: "Strategic Partnerships", description: "Forge valuable connections and collaborations to accelerate your growth.", icon: Briefcase },
+      { title: "Easy & Emergency Solutions Anytime", description: "Forge valuable connections and collaborations to accelerate your growth.", icon: Briefcase },
   ]
 
   const footerSocials = [
@@ -169,9 +169,9 @@ function LandingPageContent() {
                     <div className="inline-block bg-primary/10 text-primary font-semibold py-1 px-3 rounded-full text-sm">
                       About Crypto Folex
                     </div>
-                    <h2 className="text-3xl lg:text-4xl font-bold">The Driving Force Behind Web3 Success</h2>
+                    <h2 className="text-3xl lg:text-4xl font-bold">We help investors across the world learn about exciting new crypto investments.</h2>
                      <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                        At CRYPTO FOLEX, we're more than just a marketing agency—we're a community of passionate individuals dedicated to shaping the future of decentralized finance. From facilitating AMA sessions to forging strategic partnerships, we're committed to amplifying your project's visibility and success.
+                        At Crypto Folex, we're more than just a marketing agency - we're a community of passionate individuals dedicated to shaping the future of decentralized finance. From facilitating AMA sessions to forging strategic partnerships, we're committed to amplifying the visibility and success of projects within the crypto space.
                     </p>
                 </div>
             </div>
