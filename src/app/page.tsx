@@ -207,37 +207,39 @@ function LandingPageContent() {
         <section id="ama-intro" className="py-20 lg:py-32">
           <div className="container max-w-5xl mx-auto">
              <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold">Crypto Folex AMA Sessions</h2>
-              <p className="mt-4 text-muted-foreground text-lg">
-                Connect directly with our massive, engaged community.
-              </p>
-            </div>
+              <h2 className="text-3xl lg:text-4xl font-bold">Types of AMAs We Provide</h2>
+             </div>
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-10">
                     <div>
-                      <h3 className="text-2xl font-semibold text-primary">What is an AMA?</h3>
-                      <p className="mt-2 text-muted-foreground text-lg">
-                        An AMA (Ask Me Anything) is a live session where you present your project, address community questions, and share your vision to build trust and drive engagement.
-                      </p>
-                    </div>
-                     <div>
                       <h3 className="text-2xl font-semibold text-primary">AMA Formats</h3>
                       <ul className="mt-4 space-y-3 text-muted-foreground text-lg">
-                        <li className="flex items-center gap-3"><Twitter className="h-5 w-5 text-primary"/>X (Twitter) Space Voice AMA</li>
-                        <li className="flex items-center gap-3"><Send className="h-5 w-5 text-primary"/>Telegram Video, Voice, or Text AMA</li>
-                        <li className="flex items-center gap-3"><Video className="h-5 w-5 text-primary"/>Binance Live Video AMA</li>
+                        <li className="flex items-start gap-3"><span className="text-primary font-bold mt-1">1.</span>X Space Voice AMA</li>
+                        <li className="flex items-start gap-3"><span className="text-primary font-bold mt-1">2.</span>Telegram Video, Voice, or Text AMA</li>
+                        <li className="flex items-start gap-3"><span className="text-primary font-bold mt-1">3.</span>Binance Live Video AMA</li>
+                        <li className="flex items-start gap-3"><span className="text-primary font-bold mt-1">4.</span>Discord Video, Voice, or Text AMA</li>
                       </ul>
+                       <p className="mt-4 text-muted-foreground text-lg">
+                        Select the platform that best suits your target audience.
+                      </p>
                     </div>
                 </div>
                  <div>
-                    <Card className="p-8 bg-secondary shadow-lg">
-                      <h3 className="text-2xl font-semibold">Why Choose Us?</h3>
-                      <p className="mt-4 text-muted-foreground text-lg">
-                        Verified by Binance and a top 3 streamer on Binance Live, we've hosted over <span className="text-primary font-bold">800 AMAs</span> since 2021, building a massive, engaged community ready to hear about your project.
-                      </p>
-                      <Button asChild className="mt-6" size="lg">
-                          <Link href="/pricing">Explore AMA Packages <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                      </Button>
+                    <Card className="p-8 bg-secondary shadow-lg space-y-6">
+                      <div>
+                        <h3 className="text-2xl font-semibold text-primary">Structure of the AMA</h3>
+                        <p className="mt-2 text-muted-foreground text-lg">
+                          The one-hour session is divided into two segments:
+                        </p>
+                      </div>
+                      <div>
+                          <h4 className="font-semibold text-lg">1. Project Introduction</h4>
+                          <p className="mt-1 text-muted-foreground">Kick off the session with 5 introductory questions from the host, giving the audience an overall insight into your project.</p>
+                      </div>
+                       <div>
+                          <h4 className="font-semibold text-lg">2. Live Q&A with the Audience</h4>
+                          <p className="mt-1 text-muted-foreground">Engage with the audience directly, clear their doubts, and understand their expectations from the project.</p>
+                      </div>
                     </Card>
                  </div>
             </div>
@@ -507,3 +509,5 @@ export default function Page() {
 
   return isClient ? <LandingPageContent /> : null;
 }
+
+    
