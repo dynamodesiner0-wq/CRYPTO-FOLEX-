@@ -11,6 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Twitter, Check, Star, Send, Briefcase, Menu, Users, RadioTower, Link as LinkIcon, MessageSquare, Mic, Video, Pin, Package, ArrowRight, MoveRight } from "lucide-react";
 import Image from "next/image";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 function LandingPageContent() {
   const [scrolled, setScrolled] = React.useState(false);
@@ -60,6 +61,18 @@ function LandingPageContent() {
       { href: "https://www.binance.com/live/video?roomId=2266094", label: "AMA Recaps" },
       { href: "#", label: "Announcements" },
   ];
+  
+  const amaBanners = [
+      { src: 'https://i.postimg.cc/jSjfv6tK/IMG-20250821-092657-169.jpg', alt: 'AMA Banner 1' },
+      { src: 'https://i.postimg.cc/TY0mrN8C/IMG-20250821-092659-204.jpg', alt: 'AMA Banner 2' },
+      { src: 'https://i.postimg.cc/9FCZw5kD/IMG-20250821-092701-429.jpg', alt: 'AMA Banner 3' },
+      { src: 'https://i.postimg.cc/tRhFgCB0/IMG-20250821-092702-531.jpg', alt: 'AMA Banner 4' },
+      { src: 'https://i.postimg.cc/Znh3L1KD/IMG-20250821-092704-110.jpg', alt: 'AMA Banner 5' },
+      { src: 'https://i.postimg.cc/90t9gJDX/IMG-20250821-092704-650.jpg', alt: 'AMA Banner 6' },
+      { src: 'https://i.postimg.cc/Pq91CLGH/IMG-20250821-092706-723.jpg', alt: 'AMA Banner 7' },
+      { src: 'https://i.postimg.cc/Y9FYYpkW/IMG-20250821-092707-894.jpg', alt: 'AMA Banner 8' },
+      { src: 'https://i.postimg.cc/KYRncPHQ/IMG-20250821-092709-790.jpg', alt: 'AMA Banner 9' },
+  ]
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
@@ -134,7 +147,7 @@ function LandingPageContent() {
                     </Button>
                   </div>
               </div>
-              <div className="flex justify-center animate-fade-in animation-delay-700 md:flex">
+              <div className="flex justify-center animate-fade-in animation-delay-700">
                 <Image src="https://i.postimg.cc/jSPQHS8C/image-search-1755280175089.webp" alt="Hero Image" width={500} height={500} className="rounded-full shadow-2xl" data-ai-hint="woman tech" />
               </div>
             </div>
@@ -400,16 +413,30 @@ function LandingPageContent() {
         <section id="partners" className="py-20 bg-secondary">
           <div className="container">
             <h2 className="text-center text-3xl font-bold">PREVIOUS AMA BANNERS</h2>
-            <div className="relative mt-12">
-              <div className="flex justify-center items-center">
-                 <Image
-                    src="https://i.postimg.cc/VsZ5mdJd/IMG-20250816-000252-563.png"
-                    alt="Our Partners"
-                    width={1000}
-                    height={500}
-                    className="rounded-lg"
-                 />
-              </div>
+            <div className="relative mt-12 flex justify-center">
+              <Carousel className="w-full max-w-4xl" opts={{ loop: true }}>
+                <CarouselContent>
+                  {amaBanners.map((banner, index) => (
+                    <CarouselItem key={index}>
+                      <div className="p-1">
+                        <Card>
+                          <CardContent className="flex aspect-[2/1] items-center justify-center p-0 overflow-hidden rounded-lg">
+                            <Image
+                              src={banner.src}
+                              alt={banner.alt}
+                              width={1000}
+                              height={500}
+                              className="object-cover w-full h-full"
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
           </div>
         </section>
