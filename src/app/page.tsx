@@ -173,6 +173,12 @@ function LandingPageContent() {
                      <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                         At Crypto Folex, we're more than just a marketing agency - we're a community of passionate individuals dedicated to shaping the future of decentralized finance. From facilitating AMA sessions to forging strategic partnerships, we're committed to amplifying the visibility and success of projects within the crypto space.
                     </p>
+                    <div className="max-w-3xl mx-auto space-y-4">
+                      <h3 className="text-2xl font-bold pt-8">Why Choose Crypto Folex?</h3>
+                      <p className="text-lg text-muted-foreground">
+                        Crypto Folex is verified by Binance and one of the top 3 streamers on Binance Live. Since 2021, we have hosted over 800 AMAs. Our extensive collaboration with various projects over the years has helped us build an enthusiastic and engaged community from scratch. Now, it's your turn to leverage this strength and skyrocket your visibility in the crowded crypto space.
+                      </p>
+                    </div>
                 </div>
             </div>
           </div>
@@ -509,5 +515,3 @@ export default function Page() {
 
   return isClient ? <LandingPageContent /> : null;
 }
-
-    
