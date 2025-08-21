@@ -11,10 +11,25 @@ import { Textarea } from "@/components/ui/textarea";
 import { Twitter, Check, Star, Send, Briefcase, Menu, Users, RadioTower, Link as LinkIcon, MessageSquare, Mic, Video, Pin, Package, ArrowRight, MoveRight } from "lucide-react";
 import Image from "next/image";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from "@/components/ui/sheet";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 
 function LandingPageContent() {
   const [scrolled, setScrolled] = React.useState(false);
+  const [carouselApi, setCarouselApi] = React.useState<CarouselApi>()
+  const [current, setCurrent] = React.useState(0)
+
+  React.useEffect(() => {
+    if (!carouselApi) {
+      return
+    }
+
+    setCurrent(carouselApi.selectedScrollSnap() + 1)
+
+    carouselApi.on("select", () => {
+      setCurrent(carouselApi.selectedScrollSnap() + 1)
+    })
+  }, [carouselApi])
+
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -413,20 +428,21 @@ function LandingPageContent() {
         <section id="partners" className="py-20 bg-secondary">
           <div className="container">
             <h2 className="text-center text-3xl font-bold">PREVIOUS AMA BANNERS</h2>
-            <div className="relative mt-12 flex justify-center">
-              <Carousel className="w-full max-w-4xl" opts={{ loop: true }}>
+            <div className="relative mt-12">
+              <Carousel className="w-full max-w-4xl mx-auto" opts={{ loop: true }} setApi={setCarouselApi}>
                 <CarouselContent>
                   {amaBanners.map((banner, index) => (
                     <CarouselItem key={index}>
                       <div className="p-1">
-                        <Card>
-                          <CardContent className="flex items-center justify-center p-0 overflow-hidden rounded-lg">
+                        <Card className="bg-transparent border-0 shadow-none [perspective:1000px]">
+                          <CardContent className="flex items-center justify-center p-0 overflow-hidden rounded-lg relative aspect-[16/9] transition-transform duration-500 ease-in-out group-hover:[transform:rotateY(10deg)]">
+                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
                             <Image
                               src={banner.src}
                               alt={banner.alt}
                               width={1000}
                               height={500}
-                              className="object-contain w-full"
+                              className="object-contain w-full rounded-lg shadow-2xl"
                             />
                           </CardContent>
                         </Card>
@@ -434,9 +450,14 @@ function LandingPageContent() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
+                <CarouselPrevious className="left-[-50px]" />
+                <CarouselNext className="right-[-50px]" />
               </Carousel>
+              <div className="flex justify-center gap-2 mt-4">
+                {amaBanners.map((_, i) => (
+                  <button key={i} onClick={() => carouselApi?.scrollTo(i)} className={`h-2 w-2 rounded-full ${current === i + 1 ? 'bg-primary' : 'bg-muted'}`}></button>
+                ))}
+            </div>
             </div>
           </div>
         </section>
