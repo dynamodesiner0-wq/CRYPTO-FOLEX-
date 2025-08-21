@@ -169,25 +169,25 @@ function LandingPageContent() {
           </div>
         </section>
 
-        <section id="founder" className="py-20 lg:py-24">
-          <div className="container">
-            <div className="bg-secondary rounded-lg p-8 md:p-12 shadow-lg">
-                <div className="grid md:grid-cols-3 gap-8 items-center">
-                    <div className="flex justify-center md:justify-start">
-                        <Avatar className="h-40 w-40 border-4 border-primary">
+        <section id="founder" className="py-20 lg:py-24 bg-secondary">
+            <div className="container">
+                <div className="text-center max-w-4xl mx-auto">
+                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">5 Years of Experience</h2>
+                    <blockquote className="mt-6 text-lg text-muted-foreground">
+                        "In the ever-changing world of cryptocurrency, success requires adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just shaping the future - we're writing the playbook."
+                    </blockquote>
+                    <div className="mt-8 flex flex-col items-center gap-4">
+                        <Avatar className="h-20 w-20 border-4 border-primary">
                             <AvatarImage src="https://i.postimg.cc/2SrhPssG/IMG-20250815-225706-773.jpg" alt="Mark Crimo, Founder" />
                             <AvatarFallback>MC</AvatarFallback>
                         </Avatar>
-                    </div>
-                    <div className="md:col-span-2 text-center md:text-left space-y-4">
-                        <h3 className="text-3xl font-bold">Mark Crimo, Founder of CRYPTO FOLEX 5 star Agency</h3>
-                        <blockquote className="text-lg text-muted-foreground italic border-l-4 border-primary pl-6">
-                           "In the ever-changing world of cryptocurrency, success requires adaptability, perseverance, and collaboration. At CRYPTO FOLEX, we're not just shaping the future - we're writing the playbook."
-                        </blockquote>
+                        <div>
+                            <h3 className="text-xl font-bold">Mark Crimo</h3>
+                            <p className="text-muted-foreground">Founder of (CRYPTO FOLEX - 5 star Agency)</p>
+                        </div>
                     </div>
                 </div>
             </div>
-          </div>
         </section>
         
         <section id="about" className="py-20 lg:py-32">
